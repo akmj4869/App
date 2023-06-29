@@ -9,7 +9,6 @@ id tab
 id tab_Item1
 id tab_Item2
 id tab_Item3
-id viewpager
 layout activity_main
 layout fragment0
 layout fragment1
