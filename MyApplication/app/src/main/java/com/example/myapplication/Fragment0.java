@@ -1,4 +1,9 @@
 package com.example.myapplication;
 
-public class Fragment0 {
-}
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+public class Fragment0 extends Fragment {
+
+};
