@@ -1,0 +1,27 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id frame
+id tab
+id tab_Item1
+id tab_Item2
+id tab_Item3
+id viewpager
+layout activity_main
+layout fragment0
+layout fragment1
+layout fragment2
+layout fragment3
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string tab1
+string tab2
+string tab3
+style Base.Theme.MyApplication
+style Theme.MyApplication
+xml backup_rules
+xml data_extraction_rules
