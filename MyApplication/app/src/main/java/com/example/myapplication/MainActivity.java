@@ -1,18 +1,27 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 
     Fragment fragment0, fragment1, fragment2, fragment3;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,17 +61,19 @@ public class MainActivity extends AppCompatActivity {
                 int position = tab.getPosition();
 
                 Fragment selected = null;
-                if (position == 0){
+                if (position == 0) {
                     selected = fragment1;
-                } else if (position == 1){
+                } else if (position == 1) {
                     selected = fragment2;
-                } else if (position == 2){
+                } else if (position == 2) {
                     selected = fragment3;
                 }
                 assert selected != null;
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame, selected).commit();
-
             }
         });
+
+
+
     }
 }

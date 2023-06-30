@@ -2790,6 +2790,7 @@ int id mtrl_picker_text_input_range_start 0x7f08011e
 int id mtrl_picker_title_text 0x7f08011f
 int id mtrl_view_tag_bottom_padding 0x7f080120
 int id multiply 0x7f080121
+int id name 0x7f0801df
 int id navigation_bar_item_active_indicator_view 0x7f080122
 int id navigation_bar_item_icon_container 0x7f080123
 int id navigation_bar_item_icon_view 0x7f080124
@@ -2808,6 +2809,7 @@ int id north 0x7f080130
 int id notification_background 0x7f080131
 int id notification_main_column 0x7f080132
 int id notification_main_column_container 0x7f080133
+int id number 0x7f0801e0
 int id off 0x7f080134
 int id on 0x7f080135
 int id onInterceptTouchReturnSwipe 0x7f080136
@@ -2833,6 +2835,7 @@ int id progress_horizontal 0x7f080149
 int id radio 0x7f08014a
 int id ratio 0x7f08014b
 int id rectangles 0x7f08014c
+int id recyclerView 0x7f0801e1
 int id reverseSawtooth 0x7f08014d
 int id right 0x7f08014e
 int id rightToLeft 0x7f08014f
@@ -3136,6 +3139,7 @@ int layout notification_template_custom_big 0x7f0b0061
 int layout notification_template_icon_group 0x7f0b0062
 int layout notification_template_part_chronometer 0x7f0b0063
 int layout notification_template_part_time 0x7f0b0064
+int layout number_data 0x7f0b0078
 int layout select_dialog_item_material 0x7f0b0065
 int layout select_dialog_multichoice_material 0x7f0b0066
 int layout select_dialog_singlechoice_material 0x7f0b0067

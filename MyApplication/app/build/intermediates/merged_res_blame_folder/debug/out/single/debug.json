@@ -56,10 +56,6 @@
         "source": "C:\\Users\\82107\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-30:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.myapplication.app-merged_res-28:/layout_activity_main.xml.flat",
-        "source": "com.example.myapplication.app-main-30:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\82107\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-28:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\82107\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-30:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
@@ -70,6 +66,10 @@
     {
         "merged": "C:\\Users\\82107\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-28:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\82107\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-30:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\82107\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-28:\\layout_number_data.xml.flat",
+        "source": "C:\\Users\\82107\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-30:\\layout\\number_data.xml"
     },
     {
         "merged": "C:\\Users\\82107\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-28:\\mipmap-mdpi_ic_launcher.webp.flat",
@@ -86,5 +86,9 @@
     {
         "merged": "C:\\Users\\82107\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-28:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\82107\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-30:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.myapplication.app-merged_res-28:/layout_number_data.xml.flat",
+        "source": "com.example.myapplication.app-main-30:/layout/number_data.xml"
     }
 ]
