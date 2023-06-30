@@ -2445,6 +2445,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable home
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2907,6 +2908,7 @@ id submit_area
 id supportScrollUp
 id tab
 id tabMode
+id tab_Item0
 id tab_Item1
 id tab_Item2
 id tab_Item3
@@ -3140,7 +3142,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout number_data
+layout recyclerview_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

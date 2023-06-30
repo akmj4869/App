@@ -2,6 +2,7 @@ R_DEF: Internal format may change without notice
 local
 color black
 color white
+drawable home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id frame
@@ -9,6 +10,7 @@ id name
 id number
 id recyclerView
 id tab
+id tab_Item0
 id tab_Item1
 id tab_Item2
 id tab_Item3
@@ -17,7 +19,7 @@ layout fragment0
 layout fragment1
 layout fragment2
 layout fragment3
-layout number_data
+layout recyclerview_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
