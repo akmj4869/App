@@ -11,22 +11,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NumberDataAdapter extends RecyclerView.Adapter<NumberDataAdapter.NumberDataViewHolder> {
+public class NumberDataAdapter extends RecyclerView.Adapter<NumberDataAdapter.NumberItemViewHolder> {
 
-    private List<NumberData> datas;
+    private List<numberItem> datas;
 
-    public NumberDataAdapter(List<NumberData> datas){
+    public NumberDataAdapter(List<numberItem> datas){
         this.datas = datas;
     }
     @NonNull
     @Override
-    public NumberDataAdapter.NumberDataViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new NumberDataViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.number_data, parent, false));
+    public NumberDataAdapter.NumberItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new NumberItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NumberDataAdapter.NumberDataViewHolder holder, int position) {
-        NumberData data = datas.get(position);
+    public void onBindViewHolder(@NonNull NumberDataAdapter.NumberItemViewHolder holder, int position) {
+        numberItem data = datas.get(position);
         holder.name.setText(data.getName());
         holder.number.setText(data.getNumber());
     }
@@ -36,11 +36,11 @@ public class NumberDataAdapter extends RecyclerView.Adapter<NumberDataAdapter.Nu
         return datas.size();
     }
 
-    public class NumberDataViewHolder extends RecyclerView.ViewHolder {
+    public class NumberItemViewHolder extends RecyclerView.ViewHolder {
 
         private TextView name;
         private TextView number;
-        public NumberDataViewHolder(@NonNull View itemView) {
+        public NumberItemViewHolder(@NonNull View itemView) {
             super(itemView);
             // 아이템 뷰에 필요한 View
             name = itemView.findViewById(R.id.name);
