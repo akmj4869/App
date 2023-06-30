@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.util.JsonReader;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,20 +18,14 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+
 import java.util.ArrayList;
 
 public class Fragment1 extends Fragment {
-    private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
-    private ArrayList<numberItem> listItems = new ArrayList<>();
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment1, container, false);
-        recyclerView = view.findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(true);
-        return view;
-    }
+    private NumberDataAdapter numberDataAdapter;
+    private ArrayList<NumberData> numberDatas;
+    private RecyclerView numberRecyclerView;
+
 
     private String loadJsonFile() {
         String json = null;
@@ -46,9 +41,14 @@ public class Fragment1 extends Fragment {
         }
         return json;
     }
-    public void onStart(){
-        super.onStart();
-        ArrayList<numberItem> listItems = new ArrayList<>();
+
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment1, container, false);
+
+        ArrayList<NumberData> listItems = new ArrayList<>();
         try {
             JSONObject jsonObject = new JSONObject(loadJsonFile());
             JSONArray jsonArray = jsonObject.getJSONArray("numbers");
@@ -57,17 +57,19 @@ public class Fragment1 extends Fragment {
                 obj = jsonArray.getJSONObject(i);
                 String name = obj.getString("name");
                 String number = obj.getString("number");
-                numberItem listItem;
+                NumberData listItem;
 
-                listItem = new numberItem(name, number);
+                listItem = new NumberData(name, number);
                 listItems.add(listItem);
             }
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
-        adapter = new MyRecyclerAdapter(listItems);
-        RecyclerView.LayoutManager layoutmanager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutmanager);
-        recyclerView.setAdapter(adapter);
+        numberRecyclerView = view.findViewById(R.id.recyclerView);
+        numberDataAdapter = new NumberDataAdapter(listItems);
+        numberRecyclerView.setLayoutManager((RecyclerView.LayoutManager) new LinearLayoutManager(getActivity()));
+        numberRecyclerView.setAdapter(numberDataAdapter);
+
+        return view;
     }
 }
