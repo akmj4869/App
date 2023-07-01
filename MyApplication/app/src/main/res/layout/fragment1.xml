@@ -7,29 +7,28 @@
     <LinearLayout
         android:id="@+id/layer1"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_marginTop="5dp"
         android:weightSum="4">
         <TextView
             android:id="@+id/Index1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:text="Name"
             android:textStyle="bold"
             android:gravity="center"
             android:layout_weight="1"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="70dp"/>
         <TextView
             android:id="@+id/Index2"
             android:layout_width="0dp"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:layout_height="wrap_content"
             android:text="Phone number"
             android:gravity="center"
             android:textStyle="bold"
             android:layout_weight="3"
-            android:layout_marginLeft="50dp"
             />
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
