@@ -4,20 +4,17 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:weightSum="4"
+        android:layout_marginLeft="5dp"
         >
 
         <TextView
             android:id="@+id/name"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
             android:gravity="center"
             android:text="John"
@@ -25,11 +22,12 @@
 
         <TextView
             android:id="@+id/number"
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="25sp"
-            android:text="010-7149-9924" />
-    </LinearLayout>
+            android:text="010-7149-9924"
+            android:layout_below="@+id/name"
+            />
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

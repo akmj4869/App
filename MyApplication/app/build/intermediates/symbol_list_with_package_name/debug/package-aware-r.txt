@@ -2508,8 +2508,6 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
-id Index1
-id Index2
 id META
 id NO_DEBUG
 id SHIFT
@@ -2730,7 +2728,6 @@ id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
 id labeled
-id layer1
 id layout
 id left
 id leftToRight

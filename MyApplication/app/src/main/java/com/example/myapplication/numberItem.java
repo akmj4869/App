@@ -14,7 +14,6 @@ public class numberItem {
     }
 
     public String getNumber(){
-
         return number;
     }
 }

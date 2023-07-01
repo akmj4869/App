@@ -24,12 +24,12 @@
         "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-30:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-28:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-30:\\mipmap-xxhdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-28:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-30:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-28:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-30:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-28:\\layout_fragment0.xml.flat",
@@ -48,8 +48,8 @@
         "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-30:\\layout\\number_data.xml"
     },
     {
-        "merged": "com.example.myapplication.app-merged_res-28:/layout_fragment1.xml.flat",
-        "source": "com.example.myapplication.app-main-30:/layout/fragment1.xml"
+        "merged": "com.example.myapplication.app-merged_res-28:/layout_recyclerview_item.xml.flat",
+        "source": "com.example.myapplication.app-main-30:/layout/recyclerview_item.xml"
     },
     {
         "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-28:\\xml_data_extraction_rules.xml.flat",

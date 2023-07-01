@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
 
-        getSupportFragmentManager().beginTransaction().add(R.id.frame, fragment0).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment0).commit();
         tabLayout = findViewById(R.id.tab);
         tabLayout.getSelectedTabPosition();
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -50,20 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-                int position = tab.getPosition();
-
-                Fragment selected = null;
-                if (position == 0){
-                    selected = fragment0;
-                } else if (position == 1){
-                    selected = fragment1;
-                } else if (position == 2){
-                    selected = fragment2;
-                } else if (position == 3){
-                    selected = fragment3;
-                }
-                assert selected != null;
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame, selected).commit();
 
             }
         });

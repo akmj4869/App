@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,6 +25,7 @@ public class Fragment1 extends Fragment {
     private NumberDataAdapter numberDataAdapter;
     private ArrayList<numberItem> numberItems;
     private RecyclerView numberRecyclerView;
+    private RecyclerView.LayoutManager layoutManager;
 
 
     private String loadJsonFile() {
@@ -64,11 +66,14 @@ public class Fragment1 extends Fragment {
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
+
         numberRecyclerView = view.findViewById(R.id.recyclerView);
         numberDataAdapter = new NumberDataAdapter(listItems);
-        numberRecyclerView.setLayoutManager((RecyclerView.LayoutManager) new LinearLayoutManager(getActivity()));
+        layoutManager = (RecyclerView.LayoutManager) new LinearLayoutManager(getActivity());
+        numberRecyclerView.setLayoutManager(layoutManager);
         numberRecyclerView.setAdapter(numberDataAdapter);
-
+        DividerItemDecoration dividerItemDecorator = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
+        numberRecyclerView.addItemDecoration(dividerItemDecorator);
         return view;
     }
 }

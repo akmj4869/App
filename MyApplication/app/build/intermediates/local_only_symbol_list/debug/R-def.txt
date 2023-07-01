@@ -6,10 +6,7 @@ drawable home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable phone
-id Index1
-id Index2
 id frame
-id layer1
 id name
 id number
 id phone
