@@ -6,6 +6,8 @@ drawable home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable phone
+id Image
+id Images
 id frame
 id name
 id number
@@ -22,6 +24,7 @@ layout fragment1
 layout fragment2
 layout fragment3
 layout number_data
+layout photo
 layout recyclerview_item
 mipmap ic_launcher
 mipmap ic_launcher_round

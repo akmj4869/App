@@ -2507,6 +2507,8 @@ int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
 int id CTRL 0x7f080003
 int id FUNCTION 0x7f080004
+int id Image 0x7f0801e3
+int id Images 0x7f0801e4
 int id META 0x7f080005
 int id NO_DEBUG 0x7f080006
 int id SHIFT 0x7f080007
@@ -3144,6 +3146,7 @@ int layout notification_template_icon_group 0x7f0b0062
 int layout notification_template_part_chronometer 0x7f0b0063
 int layout notification_template_part_time 0x7f0b0064
 int layout number_data 0x7f0b0065
+int layout photo 0x7f0b007a
 int layout recyclerview_item 0x7f0b0066
 int layout select_dialog_item_material 0x7f0b0067
 int layout select_dialog_multichoice_material 0x7f0b0068
