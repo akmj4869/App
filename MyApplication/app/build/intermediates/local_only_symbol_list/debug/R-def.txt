@@ -5,7 +5,10 @@ color white
 drawable home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id Index1
+id Index2
 id frame
+id layer1
 id name
 id number
 id recyclerView
@@ -19,6 +22,7 @@ layout fragment0
 layout fragment1
 layout fragment2
 layout fragment3
+layout number_data
 layout recyclerview_item
 mipmap ic_launcher
 mipmap ic_launcher_round

@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/layer1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:scrollbars="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:weightSum="4">
+        <TextView
+            android:id="@+id/Index1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Name"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/Index2"
+            android:layout_width="0dp"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:text="Phone number"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="3"
+            android:layout_marginLeft="50dp"
+            />
     </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layer1">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>

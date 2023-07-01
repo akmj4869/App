@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
-import android.util.JsonReader;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +22,7 @@ import java.util.ArrayList;
 
 public class Fragment1 extends Fragment {
     private NumberDataAdapter numberDataAdapter;
-    private ArrayList<NumberData> numberDatas;
+    private ArrayList<numberItem> numberItems;
     private RecyclerView numberRecyclerView;
 
 
@@ -48,7 +47,7 @@ public class Fragment1 extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment1, container, false);
 
-        ArrayList<NumberData> listItems = new ArrayList<>();
+        ArrayList<numberItem> listItems = new ArrayList<>();
         try {
             JSONObject jsonObject = new JSONObject(loadJsonFile());
             JSONArray jsonArray = jsonObject.getJSONArray("numbers");
@@ -57,9 +56,9 @@ public class Fragment1 extends Fragment {
                 obj = jsonArray.getJSONObject(i);
                 String name = obj.getString("name");
                 String number = obj.getString("number");
-                NumberData listItem;
+                numberItem listItem;
 
-                listItem = new NumberData(name, number);
+                listItem = new numberItem(name, number);
                 listItems.add(listItem);
             }
         } catch (JSONException e) {
