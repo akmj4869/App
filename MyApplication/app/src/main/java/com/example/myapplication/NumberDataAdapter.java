@@ -21,7 +21,6 @@ public class NumberDataAdapter extends RecyclerView.Adapter<NumberDataAdapter.Vi
 
     public NumberDataAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
-        Context context = parent.getContext();
         return new ViewHolder(view);
     }
 

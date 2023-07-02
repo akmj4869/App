@@ -23,7 +23,6 @@ import java.util.ArrayList;
 
 public class Fragment1 extends Fragment {
     private NumberDataAdapter numberDataAdapter;
-    private ArrayList<numberItem> numberItems;
     private RecyclerView numberRecyclerView;
     private RecyclerView.LayoutManager layoutManager;
 

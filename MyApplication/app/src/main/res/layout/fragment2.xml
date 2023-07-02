@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:gravity="center"
+<androidx.recyclerview.widget.RecyclerView
+    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+    android:id="@+id/Images"
+    app:spanCount="2"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/Images"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-</RelativeLayout>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_gravity="left">
+</androidx.recyclerview.widget.RecyclerView>
