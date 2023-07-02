@@ -1,16 +1,14 @@
 {
   "images" : [
-    {"image": "imageData/sample.png"},
-    {"image": "imageData/sample2.jpg"},
-    {"image": "imageData/sample3.png"},
-    {"image": "imageData/sample4.jpg"},
-    {"image": "imageData/sample5.jpg"},
-    {"image": "imageData/sample6.jpg"},
-    {"image": "imageData/sample7.jpg"},
-    {"image": "imageData/sample8.jpg"},
-    {"image": "imageData/sample9.jpg"},
-    {"image": "imageData/sample10.jpg"},
-    {"image": "imageData/sample11.jpg"},
-    {"image": "imageData/sample12.jpg"}
+    {"image": "@drawable/sample"},
+    {"image": "@drawable/sample2"},
+    {"image": "@drawable/sample3"},
+    {"image": "@drawable/sample4"},
+    {"image": "@drawable/sample5"},
+    {"image": "@drawable/sample6"},
+    {"image": "@drawable/sample7"},
+    {"image": "@drawable/sample8"},
+    {"image": "@drawable/sample9"},
+    {"image": "@drawable/sample10"}
   ]
 }

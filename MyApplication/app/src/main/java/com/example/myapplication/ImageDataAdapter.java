@@ -2,6 +2,8 @@ package com.example.myapplication;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,8 +12,6 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import java.io.InputStream;
 import java.util.ArrayList;
 
 public class ImageDataAdapter extends RecyclerView.Adapter<ImageDataAdapter.ViewHolder> {
@@ -33,15 +33,16 @@ public class ImageDataAdapter extends RecyclerView.Adapter<ImageDataAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ImageDataAdapter.ViewHolder holder, int position) {
         String fileName = imagePath.get(position);
+        int current = position;
         try{
-            InputStream inputStream = context.getAssets().open(fileName);
-            Drawable d = Drawable.createFromStream(inputStream, null);
-            holder.imageView.setImageDrawable(d);
+            Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(),
+                    context.getResources().getIdentifier(fileName, "drawable", context.getPackageName()));
+            holder.imageView.setImageBitmap(bitmap);
             holder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(context, expandedImage.class);
-                    intent.putExtra("file", fileName);
+                    intent.putExtra("file", current);
                     context.startActivity(intent);
                 }
             });

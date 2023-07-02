@@ -1,45 +1,61 @@
 package com.example.myapplication;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.io.IOException;
-import java.io.InputStream;
+import androidx.viewpager.widget.ViewPager;
 
 public class expandedImage extends AppCompatActivity {
+    ViewPager viewPager;
+    GestureDetector gestureDetector;
+
+    int[] images = {R.drawable.sample, R.drawable.sample2, R.drawable.sample3, R.drawable.sample4, R.drawable.sample5,
+            R.drawable.sample6, R.drawable.sample7, R.drawable.sample8, R.drawable.sample9, R.drawable.sample10};
+
+    GalleryAdapter galleryAdapter;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.imagepage);
+
         Intent intent = getIntent();
-        String imageData = intent.getStringExtra("file");
+        int position = intent.getIntExtra("file", 0);
 
-        setContentView(R.layout.expanded_image);
-        ImageView image = findViewById(R.id.expanded_image);
-        image.bringToFront();
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        galleryAdapter = new GalleryAdapter(this, images);
+        viewPager.setAdapter(galleryAdapter);
+        viewPager.setCurrentItem(position);
 
-        InputStream inputStream1 = null;
-        try {
-            inputStream1 = getAssets().open(imageData);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        Drawable d1 = Drawable.createFromStream(inputStream1, null);
-        image.setImageDrawable(d1);
+        gestureDetector = new GestureDetector(this, new MyGestureDetector());
+        viewPager.setOnTouchListener((v, event) -> gestureDetector.onTouchEvent(event));
+    }
 
-        Button button = findViewById(R.id.close);
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                expandedImage.super.onBackPressed();
+    class MyGestureDetector extends GestureDetector.SimpleOnGestureListener {
+        @Override
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
+                               float velocityY) {
+            try {
+                float slope = (e1.getY() - e2.getY()) / (e1.getX() - e2.getX());
+                float angle = (float) Math.atan(slope);
+                float angleInDegree = (float) Math.toDegrees(angle);
+                // left to right
+                if (e2.getY() - e1.getY() > 10 && Math.abs(velocityY) > 10) {
+                    if ((angleInDegree > 45 && angleInDegree < 135)) {
+                        expandedImage.super.onBackPressed();
+                        overridePendingTransition(
+                                R.anim.fadein, R.anim.none);
+                        finish();
+                    }
+                }
+                return true;
+            } catch (Exception ignored) {
             }
-        });
+            return false;
+        }
     }
 }
