@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import static com.google.android.material.internal.ViewUtils.dpToPx;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.GestureDetector;
@@ -48,7 +50,7 @@ public class expandedImage extends AppCompatActivity {
                     if ((angleInDegree > 45 && angleInDegree < 135)) {
                         expandedImage.super.onBackPressed();
                         overridePendingTransition(
-                                R.anim.fadein, R.anim.none);
+                                R.anim.none, R.anim.fadeout);
                         finish();
                     }
                 }
