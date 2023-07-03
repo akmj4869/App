@@ -1,6 +1,9 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,22 +14,24 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class GalleryAdapter extends PagerAdapter {
     Context context;
-    int[] images;
+    ArrayList<String> paths = new ArrayList<>();
     LayoutInflater layoutInflater;
 
-    public GalleryAdapter(Context context, int[] images) {
+    public GalleryAdapter(Context context, ArrayList<String> paths) {
         this.context = context;
-        this.images = images;
+        this.paths = paths;
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public int getCount() {
-        return images.length;
+        return paths.size();
     }
 
     @Override
@@ -38,7 +43,8 @@ public class GalleryAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, final int position){
         View itemView = layoutInflater.inflate(R.layout.expanded_image, container, false);
         ImageView imageView = (ImageView) itemView.findViewById(R.id.image);
-        imageView.setImageResource(images[position]);
+        String imgname = paths.get(position);
+        imageView.setImageURI(Uri.fromFile(new File(Fragment2.currentDir +"/images/" + imgname)));
         Objects.requireNonNull(container).addView(itemView);
         return itemView;
     }

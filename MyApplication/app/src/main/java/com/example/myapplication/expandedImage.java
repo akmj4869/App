@@ -1,40 +1,74 @@
 package com.example.myapplication;
 
-import static com.google.android.material.internal.ViewUtils.dpToPx;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
 public class expandedImage extends AppCompatActivity {
+    ArrayList<String> paths = new ArrayList<>();
     ViewPager viewPager;
     GestureDetector gestureDetector;
 
-    int[] images = {R.drawable.sample, R.drawable.sample2, R.drawable.sample3, R.drawable.sample4, R.drawable.sample5,
-            R.drawable.sample6, R.drawable.sample7, R.drawable.sample8, R.drawable.sample9, R.drawable.sample10};
-
     GalleryAdapter galleryAdapter;
+    String filepath;
+    ImageButton delete;
+    int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.imagepage);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        delete = findViewById(R.id.delete);
 
         Intent intent = getIntent();
-        int position = intent.getIntExtra("file", 0);
+        filepath = intent.getStringExtra("filepath");
+        position = intent.getIntExtra("position", 0);
 
-        viewPager = (ViewPager) findViewById(R.id.viewPager);
-        galleryAdapter = new GalleryAdapter(this, images);
+        File imgfile = new File(filepath);
+        FileInputStream fileInputStream;
+        try {
+            fileInputStream = new FileInputStream(imgfile);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
+        try{
+            String line;
+            while((line = reader.readLine()) != null){
+                paths.add(line);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        galleryAdapter = new GalleryAdapter(this, paths);
         viewPager.setAdapter(galleryAdapter);
         viewPager.setCurrentItem(position);
-
         gestureDetector = new GestureDetector(this, new MyGestureDetector());
         viewPager.setOnTouchListener((v, event) -> gestureDetector.onTouchEvent(event));
+        delete.setOnClickListener(v -> {
+            paths.remove(position);
+            galleryAdapter.notifyDataSetChanged();
+            viewPager.setAdapter(galleryAdapter);
+            viewPager.setCurrentItem(position+ 1, true);
+            Fragment2.imageDataAdapter.removeItem(position);
+            Fragment2.imageDataAdapter.notifyDataSetChanged();
+        });
+        delete.bringToFront();
     }
 
     class MyGestureDetector extends GestureDetector.SimpleOnGestureListener {

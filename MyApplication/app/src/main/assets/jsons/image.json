@@ -1,14 +1,5 @@
 {
   "images" : [
-    {"image": "@drawable/sample"},
-    {"image": "@drawable/sample2"},
-    {"image": "@drawable/sample3"},
-    {"image": "@drawable/sample4"},
-    {"image": "@drawable/sample5"},
-    {"image": "@drawable/sample6"},
-    {"image": "@drawable/sample7"},
-    {"image": "@drawable/sample8"},
-    {"image": "@drawable/sample9"},
-    {"image": "@drawable/sample10"}
+    {"image": "캡쳐파일.jpg"}
   ]
 }
