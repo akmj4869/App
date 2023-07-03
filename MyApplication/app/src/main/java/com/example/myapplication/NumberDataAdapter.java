@@ -21,6 +21,7 @@ public class NumberDataAdapter extends RecyclerView.Adapter<NumberDataAdapter.Vi
     public NumberDataAdapter(ArrayList<numberItem> arrayList){
         this.arrayList = arrayList;
     }
+    @NonNull
     public NumberDataAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
         context = parent.getContext();
@@ -49,9 +50,9 @@ public class NumberDataAdapter extends RecyclerView.Adapter<NumberDataAdapter.Vi
         return arrayList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView name;
-        private ImageView image;
+    public static class ViewHolder extends RecyclerView.ViewHolder{
+        private final TextView name;
+        private final ImageView image;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

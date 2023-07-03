@@ -1,8 +1,6 @@
 package com.example.myapplication;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 
 import java.io.File;
@@ -20,7 +17,7 @@ import java.util.Objects;
 
 public class GalleryAdapter extends PagerAdapter {
     Context context;
-    ArrayList<String> paths = new ArrayList<>();
+    ArrayList<String> paths;
     LayoutInflater layoutInflater;
 
     public GalleryAdapter(Context context, ArrayList<String> paths) {
@@ -36,20 +33,20 @@ public class GalleryAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view == ((LinearLayout) object);
+        return view == object;
     }
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, final int position){
         View itemView = layoutInflater.inflate(R.layout.expanded_image, container, false);
-        ImageView imageView = (ImageView) itemView.findViewById(R.id.image);
+        ImageView imageView = itemView.findViewById(R.id.image);
         String imgname = paths.get(position);
-        imageView.setImageURI(Uri.fromFile(new File(Fragment2.currentDir +"/images/" + imgname)));
+        imageView.setImageURI(Uri.fromFile(new File(context.getExternalFilesDir(null).toString() + File.separator + "images" + File.separator + imgname)));
         Objects.requireNonNull(container).addView(itemView);
         return itemView;
     }
     @Override
-    public void destroyItem(ViewGroup container, int position, Object object){
+    public void destroyItem(ViewGroup container, int position, @NonNull Object object){
         container.removeView((LinearLayout) object);
     }
 }

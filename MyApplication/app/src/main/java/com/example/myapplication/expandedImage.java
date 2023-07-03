@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -61,11 +62,24 @@ public class expandedImage extends AppCompatActivity {
         gestureDetector = new GestureDetector(this, new MyGestureDetector());
         viewPager.setOnTouchListener((v, event) -> gestureDetector.onTouchEvent(event));
         delete.setOnClickListener(v -> {
-            paths.remove(position);
+            if (paths.isEmpty()) {
+                Toast.makeText(this, "no more images!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            int currentItem = viewPager.getCurrentItem();
+            if (currentItem < 0 || currentItem >= paths.size()){
+                Toast.makeText(this, "error", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            paths.remove(currentItem);
             galleryAdapter.notifyDataSetChanged();
             viewPager.setAdapter(galleryAdapter);
-            viewPager.setCurrentItem(position+ 1, true);
-            Fragment2.imageDataAdapter.removeItem(position);
+            if (position == paths.size()){
+                viewPager.setCurrentItem(currentItem-1, true);
+            } else {
+                viewPager.setCurrentItem(currentItem, true);
+            }
+            Fragment2.imageDataAdapter.removeItem(currentItem);
             Fragment2.imageDataAdapter.notifyDataSetChanged();
         });
         delete.bringToFront();

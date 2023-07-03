@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,14 +13,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class ImageDataAdapter extends RecyclerView.Adapter<ImageDataAdapter.ViewHolder> {
-    private ArrayList<String> imageName;
+    private final ArrayList<String> imageName;
     private Context context;
-    private String imagePath, imageFile;
+    private String imagePath;
+    private String imageFile;
     public ImageDataAdapter(ArrayList<String> imageName) {
         this.imageName = imageName;
     }
@@ -32,8 +29,9 @@ public class ImageDataAdapter extends RecyclerView.Adapter<ImageDataAdapter.View
     public ImageDataAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.image, parent, false);
         context = parent.getContext();
-        imagePath = context.getFilesDir().toString() + "/images";
-        imageFile = context.getFilesDir().toString() + "/imagefiles/filetexts.txt";
+        String path = context.getExternalFilesDir(null).toString();
+        imagePath = path + File.separator + "images";
+        imageFile = path + File.separator + "texts" + File.separator + "filetexts.txt";
         return new ViewHolder(view);
     }
 
@@ -41,20 +39,16 @@ public class ImageDataAdapter extends RecyclerView.Adapter<ImageDataAdapter.View
     public void onBindViewHolder(@NonNull ImageDataAdapter.ViewHolder holder, int position) {
         int current = position;
         String fileName = imageName.get(position);
-        String filePath = imagePath + "/" + fileName;
-        File imgFile = new File(filePath);
+        File imgFile = new File(imagePath, fileName);
         if (imgFile.exists()){
             Bitmap bitmap = BitmapFactory.decodeFile((imgFile.getAbsolutePath()));
             holder.imageView.setImageBitmap(bitmap);
         }
-        holder.imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, expandedImage.class);
-                intent.putExtra("filepath", imageFile);
-                intent.putExtra("position", current);
-                context.startActivity(intent);
-            }
+        holder.imageView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, expandedImage.class);
+            intent.putExtra("filepath", imageFile);
+            intent.putExtra("position", current);
+            context.startActivity(intent);
         });
     }
 
@@ -71,7 +65,7 @@ public class ImageDataAdapter extends RecyclerView.Adapter<ImageDataAdapter.View
         imageName.remove(position);
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView imageView;
 
         public ViewHolder(@NonNull View itemView) {

@@ -1,19 +1,16 @@
 package com.example.myapplication;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
     Fragment fragment0, fragment1, fragment2, fragment3;
-    private TabLayout tabLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         fragment3 = new Fragment3();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment0).commit();
-        tabLayout = findViewById(R.id.tab);
+        TabLayout tabLayout = findViewById(R.id.tab);
         tabLayout.getSelectedTabPosition();
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

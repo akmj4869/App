@@ -2,57 +2,34 @@ package com.example.myapplication;
 
 import android.Manifest;
 import android.Manifest.permission;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
-import android.graphics.drawable.BitmapDrawable;
-import android.media.ExifInterface;
-import android.media.MediaScannerConnection;
-import android.net.Uri;
-import android.os.Build;
-import android.os.Environment;
-import android.provider.MediaStore;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
 
 import static android.content.ContentValues.TAG;
-import static android.os.Environment.DIRECTORY_PICTURES;
 
 public class Camera extends AppCompatActivity {
 
-    private int REQUEST_CAMERA = 1;
-    private ImageView imageView;
+    private final int REQUEST_CAMERA = 1;
     private ActivityResultLauncher<Intent> cameraLauncher;
     private Bitmap bitmap;
-    private ImageButton capture, save, trashbin;
     private ImageView image;
     private EditText filename;
     private Intent data = null;
@@ -63,17 +40,18 @@ public class Camera extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.camerapage);
 
-        capture = findViewById(R.id.capture);
-        save = findViewById(R.id.save);
+        ImageButton capture = findViewById(R.id.capture);
+        ImageButton save = findViewById(R.id.save);
         image = findViewById(R.id.image);
-        trashbin = findViewById(R.id.trashbin);
+        ImageButton trashbin = findViewById(R.id.trashbin);
         filename = findViewById(R.id.filename);
 
-        currentDir = getFilesDir().toString();
+        currentDir = getExternalFilesDir(null).toString();
         cameraLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
                 result -> {
                     if (result.getResultCode() == RESULT_OK) {
                         data = result.getData();
+                        assert data != null;
                         bitmap = (Bitmap) data.getExtras().get("data");
                         if (bitmap == null){
                             Toast.makeText(this, "No Image", Toast.LENGTH_SHORT).show();
@@ -105,25 +83,27 @@ public class Camera extends AppCompatActivity {
     }
 
     private void saveImage() throws IOException {
-        String f = "";
-        String filenames = "";
+        String f;
+        String ftext;
         if (bitmap == null){
             Toast.makeText(this, "No Image", Toast.LENGTH_SHORT).show();
             return;
         }
-        File storageDir = new File(currentDir + "/imagefiles/");
-        if (!storageDir.exists()) storageDir.mkdirs();
+        File storageDir = new File(currentDir);
+        if (!storageDir.exists()) {
+            storageDir.mkdirs();
+        }
         if (!filename.getText().toString().isEmpty()) {
-            String imagepath = currentDir + "/imagefiles/filetexts.txt";
+            String imagepath = currentDir + File.separator + "texts" + File.separator + "filetexts.txt";
             f = filename.getText() + ".jpg";
+            ftext = f + "\n";
             File imgfile = new File(imagepath);
             if (!imgfile.exists()) {
                 imgfile.createNewFile();
             }
             try {
                 FileOutputStream fileOutputStream = new FileOutputStream(imgfile, true);
-                filenames = f + "\n";
-                fileOutputStream.write(filenames.getBytes());
+                fileOutputStream.write(ftext.getBytes());
                 fileOutputStream.flush();
                 fileOutputStream.close();
             } catch (IOException e) {
@@ -134,14 +114,15 @@ public class Camera extends AppCompatActivity {
             return;
         }
         try {
-            File imageDir = new File(currentDir + "/images");
-            if (!storageDir.exists())
-                storageDir.mkdirs();
+            File imageDir = new File(currentDir + File.separator + "images");
+            if (!imageDir.exists()) {
+                imageDir.mkdirs();
+            }
             FileOutputStream output = null;
             try {
                 File imagefile = new File(imageDir, f);
                 output = new FileOutputStream(imagefile);
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, output);
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 80, output);
                 output.flush();
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -153,7 +134,7 @@ public class Camera extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-            Fragment2.imageDataAdapter.addItem(filenames);
+            Fragment2.imageDataAdapter.addItem(f);
             Log.e(TAG, "Capture Saved");
             Toast.makeText(this, "Capture Saved ", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {

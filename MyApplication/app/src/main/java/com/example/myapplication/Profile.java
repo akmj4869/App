@@ -19,12 +19,12 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
-        TextView nameText = (TextView) findViewById(R.id.name);
-        TextView numberText = (TextView) findViewById(R.id.number);
-        TextView close = (TextView) findViewById(R.id.close);
-        ImageView call = (ImageView) findViewById(R.id.call);
-        ImageView message = (ImageView) findViewById(R.id.message);
-        ImageView edit = (ImageView) findViewById(R.id.edit);
+        TextView nameText = findViewById(R.id.name);
+        TextView numberText = findViewById(R.id.number);
+        TextView close = findViewById(R.id.close);
+        ImageView call = findViewById(R.id.call);
+        ImageView message = findViewById(R.id.message);
+        findViewById(R.id.edit);
 
         Intent intent = getIntent();
         Bundle strings = intent.getExtras();
@@ -61,8 +61,7 @@ public class Profile extends AppCompatActivity {
     private void sendSMS() {
         String smsNumber = "smsto:" + number;
         Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-        smsIntent.setData(Uri.parse(smsNumber));
-        smsIntent.setType("vnd.android-dir/mms-sms");
+        smsIntent.setDataAndType(Uri.parse(smsNumber), "vnd.android-dir/mms-sms");
         smsIntent.putExtra("address"  , "01234");
         smsIntent.putExtra("sms_body"  , "Test ");
 
