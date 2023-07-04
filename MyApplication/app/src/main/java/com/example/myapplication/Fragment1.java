@@ -1,5 +1,10 @@
 package com.example.myapplication;
 
+import static android.app.Activity.RESULT_OK;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +25,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -29,8 +35,8 @@ import java.util.ArrayList;
 public class Fragment1 extends Fragment {
 
     static ArrayList<numberItem> listItems = new ArrayList<>();
-    NumberDataAdapter numberDataAdapter;
-    RecyclerView numberRecyclerView;
+    static NumberDataAdapter numberDataAdapter;
+    static RecyclerView numberRecyclerView;
     RecyclerView.LayoutManager layoutManager;
     private String loadJsonFile() {
         String json;
@@ -52,6 +58,7 @@ public class Fragment1 extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment1, container, false);
+
         ImageButton plusButton = view.findViewById(R.id.plus);
         LinearLayout set = view.findViewById(R.id.set);
         set.setVisibility(View.GONE);
@@ -92,10 +99,7 @@ public class Fragment1 extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        numberRecyclerView.setAdapter(null);
-        numberRecyclerView.setLayoutManager(null);
         numberDataAdapter.notifyDataSetChanged();
-        numberRecyclerView.setAdapter(numberDataAdapter);
-        numberRecyclerView.setLayoutManager(layoutManager);
     }
+
 }

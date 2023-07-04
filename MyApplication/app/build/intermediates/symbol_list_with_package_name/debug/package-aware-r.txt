@@ -2515,6 +2515,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable pencil
 drawable phone
 drawable plus
 drawable round
@@ -2623,6 +2624,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id button
 id button1
 id buttonPanel
 id cache_measures
@@ -2870,7 +2872,6 @@ id path
 id pathRelative
 id peekHeight
 id percent
-id phone
 id pin
 id plus
 id plusButton

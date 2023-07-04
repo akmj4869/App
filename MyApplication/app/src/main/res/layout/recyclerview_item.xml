@@ -2,16 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:divider="?android:dividerHorizontal"
     android:showDividers="middle">
 
-        <ImageView
-            android:id="@+id/phone"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:paddingTop="10dp"
-            android:src="@drawable/phone"/>
+            android:src="@drawable/phone">
+        </de.hdodenhof.circleimageview.CircleImageView>
 
         <RelativeLayout
             android:layout_width="match_parent"

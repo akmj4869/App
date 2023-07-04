@@ -72,7 +72,7 @@ public class expandedImage extends AppCompatActivity {
                 float angle = (float) Math.atan(slope);
                 float angleInDegree = (float) Math.toDegrees(angle);
                 // left to right
-                if (e2.getY() - e1.getY() > 10 && Math.abs(velocityY) > 10) {
+                if (e2.getY() - e1.getY() > 5 && Math.abs(velocityY) > 5) {
                     if ((angleInDegree > 45 && angleInDegree < 135)) {
                         expandedImage.super.onBackPressed();
                         overridePendingTransition(

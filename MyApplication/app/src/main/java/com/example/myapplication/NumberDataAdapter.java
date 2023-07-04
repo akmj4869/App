@@ -2,7 +2,9 @@ package com.example.myapplication;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class NumberDataAdapter extends RecyclerView.Adapter<NumberDataAdapter.ViewHolder> {
-    private ArrayList<numberItem> arrayList;
+    static ArrayList<numberItem> arrayList;
     private Context context;
 
     public NumberDataAdapter(ArrayList<numberItem> arrayList){
@@ -30,17 +32,18 @@ public class NumberDataAdapter extends RecyclerView.Adapter<NumberDataAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        int current = position;
         numberItem item = arrayList.get(position);
         String name = item.getName();
-        String number = item.getNumber();
         holder.name.setText(name);
-        holder.image.setImageResource(R.drawable.phone);
+        if (item.bitmap == null){
+            holder.image.setImageResource(R.drawable.phone);
+        } else{
+            holder.image.setImageBitmap(item.bitmap);
+        }
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, Profile.class);
-            Bundle strings = new Bundle();
-            strings.putString("name", name);
-            strings.putString("number", number);
-            intent.putExtras(strings);
+            intent.putExtra("position", current);
             context.startActivity(intent);
         });
     }
@@ -52,12 +55,12 @@ public class NumberDataAdapter extends RecyclerView.Adapter<NumberDataAdapter.Vi
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private final TextView name;
-        private final ImageView image;
+        final ImageView image;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.name);
-            image = itemView.findViewById(R.id.phone);
+            image = itemView.findViewById(R.id.profile);
         }
     }
 }

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-46:12
+ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-47:12
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\akmj4\.gradle\caches\transforms-3\a965dbd46dad388efad08cc8f6d01086\transformed\material-1.5.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\akmj4\.gradle\caches\transforms-3\30f4c334bb9586b8299d31214a27cc88\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\akmj4\.gradle\caches\transforms-3\916d8c1d5f5914c9bddc90fc51ad2a21\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -45,22 +45,22 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\akmj4\.gradle\ca
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\akmj4\.gradle\caches\transforms-3\3720f74479d1bf1b71b3563ead82bc28\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\akmj4\.gradle\caches\transforms-3\89d7c0a63c4c68190d59f33c4abce116\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\akmj4\.gradle\caches\transforms-3\17cba7b38a0751cd1f4e29bcbc56ae96\transformed\jetified-annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-47:12
 	package
 		INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:2:11-69
@@ -100,16 +100,20 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:19:5-81
 	android:name
 		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:19:22-78
+uses-permission#android.permission.MANAGE_EXTERNAL_STORAGE
+ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:20:5-82
+	android:name
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:20:22-79
 uses-permission#android.permission.CALL_PHONE
-ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:20:5-68
+ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:21:5-68
 	android:name
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:20:22-66
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:21:22-66
 uses-permission#android.permission.SEND_SMS
-ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:21:5-67
+ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:22:5-67
 	android:name
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:21:22-64
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:22:22-64
 application
-ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:22:5-44:19
+ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:23:5-45:19
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\akmj4\.gradle\caches\transforms-3\a965dbd46dad388efad08cc8f6d01086\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\akmj4\.gradle\caches\transforms-3\a965dbd46dad388efad08cc8f6d01086\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\akmj4\.gradle\caches\transforms-3\30f4c334bb9586b8299d31214a27cc88\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -129,51 +133,51 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ak
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:29:9-35
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:30:9-35
 	android:label
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:27:9-41
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:28:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:25:9-54
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:26:9-54
 	android:roundIcon
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:28:9-54
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:29:9-54
 	tools:targetApi
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:31:9-29
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:32:9-29
 	android:icon
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:26:9-43
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:27:9-43
 	android:allowBackup
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:23:9-35
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:24:9-35
 	android:theme
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:30:9-51
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:31:9-51
 	android:dataExtractionRules
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:24:9-65
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:25:9-65
 activity#com.example.myapplication.expandedImage
-ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:32:9-51
+ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:9-51
 	android:name
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:32:19-48
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:19-48
 activity#com.example.myapplication.Profile
-ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:9-70
+ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:34:9-70
 	android:name
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:19-67
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:34:19-67
 activity#com.example.myapplication.Camera
-ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:34:9-69
+ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:35:9-69
 	android:name
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:34:19-66
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:35:19-66
 activity#com.example.myapplication.MainActivity
-ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:35:9-43:20
+ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:36:9-44:20
 	android:exported
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:37:13-36
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:38:13-36
 	android:name
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:36:13-41
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:37:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:38:13-42:29
+ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:39:13-43:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:39:17-69
+ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:40:17-69
 	android:name
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:39:25-66
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:40:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:41:17-77
+ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:42:17-77
 	android:name
-		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:41:27-74
+		ADDED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:42:27-74
 uses-sdk
 INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml

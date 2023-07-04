@@ -28,6 +28,17 @@
         android:src="@drawable/phone">
     </de.hdodenhof.circleimageview.CircleImageView>
 
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/pencil"
+        android:scaleType="centerInside"
+        android:backgroundTint="@color/silver"
+        android:layout_alignEnd="@+id/profile"
+        android:layout_alignBottom="@+id/profile">
+    </ImageButton>
+
     <TextView
         android:id="@id/name"
         android:layout_width="wrap_content"

@@ -53,8 +53,13 @@ public class Fragment2 extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        listItems = new ArrayList<>();
         currentDir = getActivity().getExternalFilesDir(null).toString();
         File imageDir = new File(currentDir + File.separator + "images");
+        File imgdir = new File(currentDir + File.separator + "texts");
+        if (!imgdir.exists()) {
+            imgdir.mkdirs();
+        }
         if (!imageDir.exists()) {
             imageDir.mkdirs();
         }
@@ -77,6 +82,22 @@ public class Fragment2 extends Fragment {
                                 bitmap.compress(Bitmap.CompressFormat.JPEG, 80, output);
                                 output.flush();
                                 output.close();
+                                File img = new File(imgdir, "filetexts.txt");
+                                if (!img.exists()) {
+                                    try {
+                                        img.createNewFile();
+                                    } catch (IOException e) {
+                                        throw new RuntimeException(e);
+                                    }
+                                }
+                                try {
+                                    FileOutputStream fileOutputStream = new FileOutputStream(img, true);
+                                    fileOutputStream.write(f.getBytes());
+                                    fileOutputStream.flush();
+                                    fileOutputStream.close();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
                                 Toast.makeText(getActivity(), "Image Loaded", Toast.LENGTH_SHORT).show();
                             }
                         } catch(IOException e){
@@ -130,8 +151,8 @@ public class Fragment2 extends Fragment {
         });
         gallery.setOnClickListener(v -> {
             format = new SimpleDateFormat("HH.mm.ss");
-            f = format.format(new Date());
-            file_name = f + ".jpg";
+            file_name = format.format(new Date()) + ".jpg";
+            f = file_name + "\n";
             Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
             galleryIntent.setType("image/*");
             launcher.launch(Intent.createChooser(galleryIntent, "Select Picture"));
@@ -142,11 +163,7 @@ public class Fragment2 extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        imageRecyclerView.setAdapter(null);
-        imageRecyclerView.setLayoutManager(null);
         imageDataAdapter.notifyDataSetChanged();
-        imageRecyclerView.setAdapter(imageDataAdapter);
-        imageRecyclerView.setLayoutManager(layoutManager);
     }
 
     public static class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {
@@ -184,4 +201,3 @@ public class Fragment2 extends Fragment {
         }
     }
 }
-
