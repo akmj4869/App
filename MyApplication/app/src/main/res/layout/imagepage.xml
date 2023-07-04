@@ -9,6 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <TextView
+        android:id="@+id/imagename"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text=""
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp">
+    </TextView>
+
     <ImageButton
         android:id="@+id/delete"
         android:layout_width="100dp"

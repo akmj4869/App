@@ -2,10 +2,13 @@ package com.example.myapplication;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,28 +21,25 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Set;
 
 public class expandedImage extends AppCompatActivity {
-    ArrayList<String> paths = new ArrayList<>();
-    ViewPager viewPager;
-    GestureDetector gestureDetector;
 
+    private ArrayList<String> paths = new ArrayList<>();
+    GestureDetector gestureDetector;
     GalleryAdapter galleryAdapter;
-    String filepath;
-    ImageButton delete;
     int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.imagepage);
-        viewPager = (ViewPager) findViewById(R.id.viewPager);
-        delete = findViewById(R.id.delete);
-
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
+        ImageButton delete = findViewById(R.id.delete);
+        TextView imagename = findViewById(R.id.imagename);
         Intent intent = getIntent();
-        filepath = intent.getStringExtra("filepath");
+        String filepath = intent.getStringExtra("filepath");
         position = intent.getIntExtra("position", 0);
-
         File imgfile = new File(filepath);
         FileInputStream fileInputStream;
         try {
@@ -56,7 +56,9 @@ public class expandedImage extends AppCompatActivity {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
         galleryAdapter = new GalleryAdapter(this, paths);
+        imagename.setText(paths.get(position).replace(".jpg", ""));
         viewPager.setAdapter(galleryAdapter);
         viewPager.setCurrentItem(position);
         gestureDetector = new GestureDetector(this, new MyGestureDetector());
@@ -72,15 +74,22 @@ public class expandedImage extends AppCompatActivity {
                 return;
             }
             paths.remove(currentItem);
+            Fragment2.imageDataAdapter.removeItem(currentItem);
             galleryAdapter.notifyDataSetChanged();
             viewPager.setAdapter(galleryAdapter);
-            if (position == paths.size()){
-                viewPager.setCurrentItem(currentItem-1, true);
+            if (paths.size() == 0){
+                viewPager.setAdapter(null);
+                imagename.setText("");
+            }
+            else if (currentItem == paths.size()){
+                viewPager.setCurrentItem(currentItem - 1, true);
+                imagename.setText(paths.get(currentItem - 1).replace(".jpg", ""));
+                Fragment2.imageDataAdapter.removeItem(currentItem);
             } else {
                 viewPager.setCurrentItem(currentItem, true);
+                imagename.setText(paths.get(currentItem).replace(".jpg", ""));
+                Fragment2.imageDataAdapter.removeItem(currentItem);
             }
-            Fragment2.imageDataAdapter.removeItem(currentItem);
-            Fragment2.imageDataAdapter.notifyDataSetChanged();
         });
         delete.bringToFront();
     }
