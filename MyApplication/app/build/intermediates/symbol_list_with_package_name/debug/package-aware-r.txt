@@ -27,10 +27,12 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim fadeout
 anim fragment_fast_out_extra_slow_in
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
+anim none
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -253,6 +255,10 @@ attr circularflow_defaultAngle
 attr circularflow_defaultRadius
 attr circularflow_radiusInDP
 attr circularflow_viewCenter
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr clearsTag
 attr clickAction
 attr clockFaceBackgroundColor
@@ -1271,6 +1277,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gray
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -1756,6 +1763,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color silver
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -2432,6 +2440,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable border
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2440,11 +2449,14 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable call
+drawable camera
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edit
 drawable home
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
@@ -2476,6 +2488,7 @@ drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable menu
+drawable message
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -2502,16 +2515,17 @@ drawable notify_panel_notification_icon_bg
 drawable phone
 drawable plus
 drawable round
+drawable save
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable trash
 id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
-id Image
 id Images
 id META
 id NO_DEBUG
@@ -2606,11 +2620,15 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id button1
 id buttonPanel
 id cache_measures
 id calendarView
+id call
 id callMeasure
+id camera
 id cancel_button
+id capture
 id carryVelocity
 id center
 id center_horizontal
@@ -2631,6 +2649,7 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id clockwise
+id close
 id closest
 id collapseActionView
 id compress
@@ -2654,6 +2673,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delete
 id delete_button
 id deltaRelative
 id dependency_ordering
@@ -2683,6 +2703,9 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id edit
+id editText1
+id editText2
 id edit_query
 id elastic
 id end
@@ -2693,6 +2716,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id filename
 id fill
 id fill_horizontal
 id fill_vertical
@@ -2726,6 +2750,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imagename
 id immediateStop
 id included
 id info
@@ -2843,10 +2868,12 @@ id peekHeight
 id percent
 id phone
 id pin
+id plus
 id plusButton
 id position
 id postLayout
 id preview
+id profile
 id progress_circular
 id progress_horizontal
 id radio
@@ -2860,6 +2887,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id save
 id save_button
 id save_non_transition_alpha
 id save_overlay_view
@@ -2885,6 +2913,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id set
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -2953,6 +2982,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView1
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2977,6 +3007,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id trashbin
 id triangle
 id unchecked
 id uniform
@@ -2984,6 +3015,7 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
+id viewPager
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3089,6 +3121,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout calendar_view
+layout camerapage
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3105,10 +3138,13 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout expanded_image
 layout fragment0
 layout fragment1
 layout fragment2
 layout fragment3
+layout image
+layout imagepage
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3165,7 +3201,7 @@ layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout number_data
-layout photo
+layout profile
 layout recyclerview_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
@@ -3186,9 +3222,12 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout writefile
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string Tab3
+string _010_7149_9924
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3233,6 +3272,7 @@ string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
+string john
 string m3_ref_typeface_brand_display_regular
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
@@ -3321,6 +3361,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string tab0
 string tab1
 string tab2
 string tab3
@@ -4375,6 +4416,7 @@ styleable Carousel carousel_backwardTransition carousel_emptyViewsBehavior carou
 styleable CheckedTextView android_checkMark checkMarkCompat checkMarkTint checkMarkTintMode
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable CircularProgressIndicator indicatorDirectionCircular indicatorInset indicatorSize
 styleable ClockFaceView clockFaceBackgroundColor clockNumberTextColor
 styleable ClockHandView clockHandColor materialCircleRadius selectorSize

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="gray">#66666666</color>
+    <color name="silver">#CCCCCCCC</color>
     <color name="white">#FFFFFFFF</color>
+    <string name="Tab3">tab3</string>
+    <string name="_010_7149_9924">010-7149-9924</string>
     <string name="app_name">My Application</string>
+    <string name="john">John</string>
+    <string name="tab0">tab0</string>
     <string name="tab1">Tab1</string>
     <string name="tab2">Tab2</string>
     <string name="tab3">Tab3</string>
