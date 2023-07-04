@@ -69,7 +69,7 @@ public class Fragment1 extends Fragment {
 
         numberRecyclerView = view.findViewById(R.id.recyclerView);
         numberDataAdapter = new NumberDataAdapter(listItems);
-        layoutManager = (RecyclerView.LayoutManager) new LinearLayoutManager(getActivity());
+        layoutManager = new LinearLayoutManager(getActivity());
         numberRecyclerView.setLayoutManager(layoutManager);
         numberRecyclerView.setAdapter(numberDataAdapter);
         DividerItemDecoration dividerItemDecorator = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
