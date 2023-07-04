@@ -1,0 +1,10 @@
+MyApplication/idea
+MyApplication/.gradle
+MyApplication/local.properties
+MyApplication/settings.graddle
+MyApplication/gradlew
+MyApplication/app/build
+MyApplication/build.gradle
+MyApplication/gradle.properties
+
+
