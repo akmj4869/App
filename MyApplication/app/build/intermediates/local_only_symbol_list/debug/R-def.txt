@@ -9,7 +9,10 @@ color white
 drawable border
 drawable call
 drawable camera
+drawable dismiss
 drawable edit
+drawable gallery
+drawable hide
 drawable home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -31,11 +34,12 @@ id close
 id content_hint
 id delete
 id delete_button
-id edit
 id editText1
 id editText2
 id filename
 id frame
+id gallery
+id hide
 id image
 id imagename
 id memo_content_edit

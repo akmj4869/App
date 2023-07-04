@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,7 +25,7 @@ public class Profile extends AppCompatActivity {
         TextView close = findViewById(R.id.close);
         ImageView call = findViewById(R.id.call);
         ImageView message = findViewById(R.id.message);
-        findViewById(R.id.edit);
+        ImageView dismiss = findViewById(R.id.hide);
 
         Intent intent = getIntent();
         Bundle strings = intent.getExtras();
@@ -49,9 +50,18 @@ public class Profile extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Send failed ", Toast.LENGTH_SHORT).show();
             }
         });
+        dismiss.setOnClickListener(v -> {
+            Delete(name);
+            Profile.super.onBackPressed();
+        });
         close.setOnClickListener(v -> Profile.super.onBackPressed());
 
     }
+
+    private void Delete(String name) {
+        Fragment1.listItems.removeIf(t -> t.getName().equals(name));
+    }
+
     private void makePhoneCall() {
         String callNumber = "tel:" + number;
         startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(callNumber)));

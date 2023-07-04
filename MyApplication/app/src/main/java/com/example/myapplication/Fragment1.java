@@ -28,7 +28,10 @@ import java.util.ArrayList;
 
 public class Fragment1 extends Fragment {
 
-
+    static ArrayList<numberItem> listItems = new ArrayList<>();
+    NumberDataAdapter numberDataAdapter;
+    RecyclerView numberRecyclerView;
+    RecyclerView.LayoutManager layoutManager;
     private String loadJsonFile() {
         String json;
         try {
@@ -56,7 +59,6 @@ public class Fragment1 extends Fragment {
         EditText numberEdit = view.findViewById(R.id.number);
         Button add = view.findViewById(R.id.add);
 
-        ArrayList<numberItem> listItems = new ArrayList<>();
         try {
             JSONObject jsonObject = new JSONObject(loadJsonFile());
             JSONArray jsonArray = jsonObject.getJSONArray("numbers");
@@ -70,9 +72,9 @@ public class Fragment1 extends Fragment {
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
-        RecyclerView numberRecyclerView = view.findViewById(R.id.recyclerView);
-        NumberDataAdapter numberDataAdapter = new NumberDataAdapter(listItems);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        numberRecyclerView = view.findViewById(R.id.recyclerView);
+        numberDataAdapter = new NumberDataAdapter(listItems);
+        layoutManager = new LinearLayoutManager(getActivity());
         numberRecyclerView.setLayoutManager(layoutManager);
         numberRecyclerView.setAdapter(numberDataAdapter);
         DividerItemDecoration dividerItemDecorator = new DividerItemDecoration(requireActivity(), DividerItemDecoration.VERTICAL);
@@ -85,5 +87,15 @@ public class Fragment1 extends Fragment {
             set.setVisibility(View.GONE);
         });
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        numberRecyclerView.setAdapter(null);
+        numberRecyclerView.setLayoutManager(null);
+        numberDataAdapter.notifyDataSetChanged();
+        numberRecyclerView.setAdapter(numberDataAdapter);
+        numberRecyclerView.setLayoutManager(layoutManager);
     }
 }

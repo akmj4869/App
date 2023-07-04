@@ -75,12 +75,12 @@
             android:src="@drawable/message">
         </ImageView>
         <ImageView
-            android:id="@+id/edit"
+            android:id="@+id/hide"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:padding="20dp"
-            android:src="@drawable/edit">
+            android:padding="15dp"
+            android:src="@drawable/hide">
         </ImageView>
     </LinearLayout>
 

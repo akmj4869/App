@@ -134,9 +134,10 @@ public class Camera extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-            Fragment2.imageDataAdapter.addItem(f);
+            Fragment2.listItems.add(f);
             Log.e(TAG, "Capture Saved");
             Toast.makeText(this, "Capture Saved ", Toast.LENGTH_SHORT).show();
+            Camera.super.onBackPressed();
         } catch (Exception e) {
             Log.w(TAG, "Capture Saving Error!", e);
             Toast.makeText(this, "Save failed", Toast.LENGTH_SHORT).show();

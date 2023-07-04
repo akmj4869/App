@@ -2456,7 +2456,10 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dismiss
 drawable edit
+drawable gallery
+drawable hide
 drawable home
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
@@ -2703,7 +2706,6 @@ id easeIn
 id easeInOut
 id easeOut
 id east
-id edit
 id editText1
 id editText2
 id edit_query
@@ -2729,6 +2731,7 @@ id forever
 id fragment_container_view_tag
 id frame
 id frost
+id gallery
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2739,6 +2742,7 @@ id grouping
 id groups
 id guideline
 id header_title
+id hide
 id hideable
 id home
 id homeAsUp

@@ -41,71 +41,73 @@
 25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 25-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:18:5-80
 25-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:18:22-77
-26    <uses-permission android:name="android.permission.CALL_PHONE" />
-26-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:19:5-68
-26-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:19:22-66
-27    <uses-permission android:name="android.permission.SEND_SMS" />
-27-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:20:5-67
-27-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:20:22-64
-28
-29    <permission
-29-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-30        android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-30-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-31        android:protectionLevel="signature" />
-31-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
-32
-33    <uses-permission android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-33-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-33-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-34
-35    <application
-35-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:21:5-43:19
-36        android:allowBackup="true"
-36-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:22:9-35
-37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-37-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-38        android:dataExtractionRules="@xml/data_extraction_rules"
-38-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:23:9-65
-39        android:debuggable="true"
-40        android:extractNativeLibs="false"
-41        android:fullBackupContent="@xml/backup_rules"
-41-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:24:9-54
-42        android:icon="@mipmap/ic_launcher"
-42-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:25:9-43
-43        android:label="@string/app_name"
-43-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:26:9-41
-44        android:roundIcon="@mipmap/ic_launcher_round"
-44-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:27:9-54
-45        android:supportsRtl="true"
-45-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:28:9-35
-46        android:testOnly="true"
+26    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+26-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:19:5-81
+26-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:19:22-78
+27    <uses-permission android:name="android.permission.CALL_PHONE" />
+27-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:20:5-68
+27-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:20:22-66
+28    <uses-permission android:name="android.permission.SEND_SMS" />
+28-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:21:5-67
+28-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:21:22-64
+29
+30    <permission
+30-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+31        android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+31-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+32        android:protectionLevel="signature" />
+32-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+33
+34    <uses-permission android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+34-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+34-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+35
+36    <application
+36-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:22:5-44:19
+37        android:allowBackup="true"
+37-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:23:9-35
+38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+38-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+39        android:dataExtractionRules="@xml/data_extraction_rules"
+39-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:24:9-65
+40        android:debuggable="true"
+41        android:extractNativeLibs="false"
+42        android:fullBackupContent="@xml/backup_rules"
+42-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:25:9-54
+43        android:icon="@mipmap/ic_launcher"
+43-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:26:9-43
+44        android:label="@string/app_name"
+44-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:27:9-41
+45        android:roundIcon="@mipmap/ic_launcher_round"
+45-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:28:9-54
+46        android:supportsRtl="true"
+46-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:29:9-35
 47        android:theme="@style/Theme.MyApplication" >
-47-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:29:9-51
+47-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:30:9-51
 48        <activity android:name="com.example.myapplication.expandedImage" />
-48-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:31:9-51
-48-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:31:19-48
+48-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:32:9-51
+48-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:32:19-48
 49        <activity android:name="com.example.myapplication.Profile" />
-49-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:32:9-70
-49-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:32:19-67
+49-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:9-70
+49-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:19-67
 50        <activity android:name="com.example.myapplication.Camera" />
-50-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:9-69
-50-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:19-66
+50-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:34:9-69
+50-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:34:19-66
 51        <activity
-51-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:34:9-42:20
+51-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:35:9-43:20
 52            android:name="com.example.myapplication.MainActivity"
-52-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:35:13-41
+52-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:36:13-41
 53            android:exported="true" >
-53-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:36:13-36
+53-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:37:13-36
 54            <intent-filter>
-54-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:37:13-41:29
+54-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:38:13-42:29
 55                <action android:name="android.intent.action.MAIN" />
-55-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:38:17-69
-55-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:38:25-66
+55-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:39:17-69
+55-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:39:25-66
 56
 57                <category android:name="android.intent.category.LAUNCHER" />
-57-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:40:17-77
-57-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:40:27-74
+57-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:41:17-77
+57-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:41:27-74
 58            </intent-filter>
 59        </activity>
 60

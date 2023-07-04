@@ -16,7 +16,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class ImageDataAdapter extends RecyclerView.Adapter<ImageDataAdapter.ViewHolder> {
-    private final ArrayList<String> imageName;
+    private ArrayList<String> imageName;
     private Context context;
     private String imagePath;
     private String imageFile;
@@ -46,7 +46,6 @@ public class ImageDataAdapter extends RecyclerView.Adapter<ImageDataAdapter.View
         }
         holder.imageView.setOnClickListener(v -> {
             Intent intent = new Intent(context, expandedImage.class);
-            intent.putExtra("filepath", imageFile);
             intent.putExtra("position", current);
             context.startActivity(intent);
         });
@@ -55,14 +54,6 @@ public class ImageDataAdapter extends RecyclerView.Adapter<ImageDataAdapter.View
     @Override
     public int getItemCount() {
         return imageName.size();
-    }
-
-    public void addItem(String s) {
-        imageName.add(s);
-    }
-
-    public void removeItem(int position) {
-        imageName.remove(position);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

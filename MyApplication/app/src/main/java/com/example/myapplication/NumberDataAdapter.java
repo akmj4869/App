@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class NumberDataAdapter extends RecyclerView.Adapter<NumberDataAdapter.ViewHolder> {
-    private static ArrayList<numberItem> arrayList;
+    private ArrayList<numberItem> arrayList;
     private Context context;
 
     public NumberDataAdapter(ArrayList<numberItem> arrayList){
