@@ -8,8 +8,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,9 +20,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -45,7 +40,6 @@ public class Profile extends AppCompatActivity {
         ImageView dismiss = findViewById(R.id.hide);
         CircleImageView profile = findViewById(R.id.profile);
         ImageButton button = findViewById(R.id.button);
-        RecyclerView recyclerView = Fragment1.numberRecyclerView;
 
         Intent intent = getIntent();
         position = intent.getIntExtra("position", 0);
@@ -83,7 +77,7 @@ public class Profile extends AppCompatActivity {
                 if (data != null) {
                     Uri imageUri = data.getData();
                     numberItem item = NumberDataAdapter.arrayList.get(position);
-                    Bitmap bitmap = null;
+                    Bitmap bitmap;
                     try {
                         bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
                     } catch (IOException e) {

@@ -1,16 +1,12 @@
 package com.example.myapplication;
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
-import android.icu.util.Output;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.renderscript.ScriptGroup;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,8 +17,6 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,18 +27,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Fragment2 extends Fragment {
     private ImageDataAdapter imageDataAdapter;
-    static ArrayList<String> listItems = new ArrayList<>();
-    private RecyclerView imageRecyclerView;
-    private GridLayoutManager layoutManager;
+    static ArrayList<String> listItems;
     private ActivityResultLauncher<Intent> launcher;
     static String currentDir;
     SimpleDateFormat format;
@@ -68,7 +58,7 @@ public class Fragment2 extends Fragment {
                 Intent data = result.getData();
                 if (data != null) {
                     Uri imageUri = data.getData();
-                    Bitmap bitmap = null;
+                    Bitmap bitmap;
                     try {
                         bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), imageUri);
                     } catch (IOException e) {
@@ -78,28 +68,26 @@ public class Fragment2 extends Fragment {
                         try{
                             File imagefile = new File(imageDir, file_name);
                             FileOutputStream output = new FileOutputStream(imagefile);
-                            if (output != null) {
-                                bitmap.compress(Bitmap.CompressFormat.JPEG, 80, output);
-                                output.flush();
-                                output.close();
-                                File img = new File(imgdir, "filetexts.txt");
-                                if (!img.exists()) {
-                                    try {
-                                        img.createNewFile();
-                                    } catch (IOException e) {
-                                        throw new RuntimeException(e);
-                                    }
-                                }
+                            bitmap.compress(Bitmap.CompressFormat.JPEG, 80, output);
+                            output.flush();
+                            output.close();
+                            File img = new File(imgdir, "filetexts.txt");
+                            if (!img.exists()) {
                                 try {
-                                    FileOutputStream fileOutputStream = new FileOutputStream(img, true);
-                                    fileOutputStream.write(f.getBytes());
-                                    fileOutputStream.flush();
-                                    fileOutputStream.close();
+                                    img.createNewFile();
                                 } catch (IOException e) {
-                                    e.printStackTrace();
+                                    throw new RuntimeException(e);
                                 }
-                                Toast.makeText(getActivity(), "Image Loaded", Toast.LENGTH_SHORT).show();
                             }
+                            try {
+                                FileOutputStream fileOutputStream = new FileOutputStream(img, true);
+                                fileOutputStream.write(f.getBytes());
+                                fileOutputStream.flush();
+                                fileOutputStream.close();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            Toast.makeText(getActivity(), "Image Loaded", Toast.LENGTH_SHORT).show();
                         } catch(IOException e){
                             e.printStackTrace();
                         }
@@ -112,7 +100,7 @@ public class Fragment2 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment2, container, false);;
+        View view = inflater.inflate(R.layout.fragment2, container, false);
         File imgdir = new File(currentDir + File.separator + "texts");
         if (!imgdir.exists()) {
             imgdir.mkdirs();
@@ -135,19 +123,19 @@ public class Fragment2 extends Fragment {
                 throw new RuntimeException(e);
             }
         }
-        imageRecyclerView = view.findViewById(R.id.Images);
+        RecyclerView imageRecyclerView = view.findViewById(R.id.Images);
         ImageButton camera = view.findViewById(R.id.camera);
         ImageButton gallery = view.findViewById(R.id.gallery);
         camera.bringToFront();
         gallery.bringToFront();
         imageDataAdapter = new ImageDataAdapter(listItems);
-        layoutManager =  new GridLayoutManager(getActivity(), 2);
+        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
         imageRecyclerView.setLayoutManager(layoutManager);
         imageRecyclerView.addItemDecoration(new GridSpacingItemDecoration(2, 75, true));
         imageRecyclerView.setAdapter(imageDataAdapter);
         camera.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), Camera.class);
-            getActivity().startActivity(intent);
+            requireActivity().startActivity(intent);
         });
         gallery.setOnClickListener(v -> {
             format = new SimpleDateFormat("HH.mm.ss");

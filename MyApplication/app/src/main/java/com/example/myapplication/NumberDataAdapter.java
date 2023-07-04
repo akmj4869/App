@@ -2,9 +2,6 @@ package com.example.myapplication;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +18,7 @@ public class NumberDataAdapter extends RecyclerView.Adapter<NumberDataAdapter.Vi
     private Context context;
 
     public NumberDataAdapter(ArrayList<numberItem> arrayList){
-        this.arrayList = arrayList;
+        NumberDataAdapter.arrayList = arrayList;
     }
     @NonNull
     public NumberDataAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

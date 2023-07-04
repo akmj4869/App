@@ -1,10 +1,5 @@
 package com.example.myapplication;
 
-import static android.app.Activity.RESULT_OK;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +20,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -34,14 +28,14 @@ import java.util.ArrayList;
 
 public class Fragment1 extends Fragment {
 
-    static ArrayList<numberItem> listItems = new ArrayList<>();
-    static NumberDataAdapter numberDataAdapter;
+    static ArrayList<numberItem> listItems;
+    NumberDataAdapter numberDataAdapter;
     static RecyclerView numberRecyclerView;
     RecyclerView.LayoutManager layoutManager;
     private String loadJsonFile() {
         String json;
         try {
-            InputStream inputStream = getActivity().getAssets().open("jsons/example.json");
+            InputStream inputStream = requireActivity().getAssets().open("jsons/example.json");
             int size = inputStream.available();
             byte[] buffer = new byte[size];
             inputStream.read(buffer);
@@ -58,6 +52,7 @@ public class Fragment1 extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment1, container, false);
+        listItems = new ArrayList<>();
 
         ImageButton plusButton = view.findViewById(R.id.plus);
         LinearLayout set = view.findViewById(R.id.set);

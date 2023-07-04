@@ -16,10 +16,10 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class ImageDataAdapter extends RecyclerView.Adapter<ImageDataAdapter.ViewHolder> {
-    private ArrayList<String> imageName;
+    private final ArrayList<String> imageName;
     private Context context;
     private String imagePath;
-    private String imageFile;
+
     public ImageDataAdapter(ArrayList<String> imageName) {
         this.imageName = imageName;
     }
@@ -31,7 +31,6 @@ public class ImageDataAdapter extends RecyclerView.Adapter<ImageDataAdapter.View
         context = parent.getContext();
         String path = context.getExternalFilesDir(null).toString();
         imagePath = path + File.separator + "images";
-        imageFile = path + File.separator + "texts" + File.separator + "filetexts.txt";
         return new ViewHolder(view);
     }
 
