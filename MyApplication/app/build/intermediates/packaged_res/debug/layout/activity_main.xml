@@ -4,15 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EAECEE">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabIconTint="@color/black"
+        android:background="#EAECEE"
         app:tabMode="fixed"
+        app:tabIconTintMode="multiply"
         >
 
         <com.google.android.material.tabs.TabItem
@@ -20,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:icon="@drawable/home"
+            android:background="@color/black"
             />
 
 
@@ -27,18 +30,23 @@
             android:id="@+id/tab_Item1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tab1" />
+            android:text="@string/tab1"
+            android:background="@color/white"
+            />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tab_Item2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:text="@string/tab2" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tab_Item3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
+
             android:text="@string/tab3" />
 
     </com.google.android.material.tabs.TabLayout>
@@ -47,7 +55,8 @@
         android:id="@+id/frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/tab">
+        android:layout_below="@id/tab"
+        android:background="#EAECEE ">
     </FrameLayout>
 
 

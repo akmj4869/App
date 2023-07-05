@@ -2440,6 +2440,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable arrow
 drawable avd_hide_password
 drawable avd_show_password
 drawable border
@@ -2453,6 +2454,9 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable call
 drawable camera
+drawable cancel
+drawable check
+drawable delete
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2494,6 +2498,7 @@ drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable menu
 drawable message
+drawable modify
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -2521,6 +2526,8 @@ drawable pencil
 drawable phone
 drawable plus
 drawable round
+drawable round_edge
+drawable round_edge_selected
 drawable save
 drawable test_custom_background
 drawable test_level_drawable
@@ -2599,6 +2606,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id alarm_diagram
 id alertTitle
 id aligned
 id all
@@ -2634,6 +2642,7 @@ id calendarView
 id call
 id callMeasure
 id camera
+id cancel
 id cancel_button
 id capture
 id carryVelocity
@@ -2665,7 +2674,6 @@ id constraint
 id container
 id content
 id contentPanel
-id content_hint
 id contiguous
 id continuousVelocity
 id coordinator
@@ -2675,7 +2683,9 @@ id currentState
 id custom
 id customPanel
 id cut
+id date
 id date_picker_actions
+id date_time
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
@@ -2721,6 +2731,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab_main
 id fade
 id filename
 id fill
@@ -2734,6 +2745,7 @@ id floating
 id forever
 id fragment_container_view_tag
 id frame
+id from_time
 id frost
 id gallery
 id ghost_view
@@ -2999,9 +3011,12 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id time
+id time_picker1
+id time_picker2
 id title
 id titleDividerNoCustom
 id title_template
+id to_time
 id toggle
 id top
 id topPanel
@@ -3128,6 +3143,7 @@ layout abc_tooltip
 layout activity_main
 layout calendar_view
 layout camerapage
+layout custom_alram_dialog
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3740,6 +3756,7 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
 style ShapeAppearanceOverlay_TopLeftCut
 style ShapeAppearanceOverlay_TopRightDifferentCornerSize
+style TabTheme
 style Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style Test_Theme_MaterialComponents_MaterialCalendar
 style Test_Widget_MaterialComponents_MaterialCalendar

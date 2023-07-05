@@ -35,6 +35,8 @@ public class Fragment1 extends Fragment {
     NumberDataAdapter numberDataAdapter;
     static RecyclerView numberRecyclerView;
     RecyclerView.LayoutManager layoutManager;
+
+
     private String loadJsonFile() {
         String json;
         try {

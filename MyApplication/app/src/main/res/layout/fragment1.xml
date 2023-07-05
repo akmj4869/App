@@ -6,12 +6,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.recyclerview.widget.RecyclerView
+
         android:id="@+id/recyclerView"
+        android:background="@drawable/round_edge"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </androidx.recyclerview.widget.RecyclerView>
 
     <LinearLayout
+
         android:id="@+id/set"
         android:layout_width="300dp"
         android:layout_height="200dp"

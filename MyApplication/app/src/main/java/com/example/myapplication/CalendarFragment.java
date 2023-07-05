@@ -35,6 +35,7 @@ public class CalendarFragment extends Fragment implements MemoAdapter.OnItemClic
     private ArrayList<MemoItem> memoItems;
     private RecyclerView.LayoutManager layoutManager;
     private String key;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -90,6 +91,7 @@ public class CalendarFragment extends Fragment implements MemoAdapter.OnItemClic
             @Override
             public void onClick(View view) {
                 Fragment fragment = new MemoWritingFragment(key);
+
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.addToBackStack(null);

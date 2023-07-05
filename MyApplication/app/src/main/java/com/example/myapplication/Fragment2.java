@@ -37,13 +37,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class Fragment2 extends Fragment {
+public class Fragment2 extends Fragment1{
     private ImageDataAdapter imageDataAdapter;
     static ArrayList<String> listItems = new ArrayList<>();
     private ActivityResultLauncher<Intent> launcher;
     static String currentDir;
     SimpleDateFormat format;
     String file_name, f;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
