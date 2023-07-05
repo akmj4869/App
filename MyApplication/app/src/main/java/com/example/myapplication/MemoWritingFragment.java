@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,15 +18,18 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
+import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class MemoWritingFragment extends Fragment {
+public class MemoWritingFragment extends Fragment{
 
     private String keyDate;
 
@@ -34,7 +38,9 @@ public class MemoWritingFragment extends Fragment {
     }
     private EditText editTitleText;
     private EditText editContentText;
-    private EditText editTimeText;
+    private TextView editTimeText;
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -44,8 +50,16 @@ public class MemoWritingFragment extends Fragment {
         editContentText = view.findViewById(R.id.memo_content_edit);
         editTimeText = view.findViewById(R.id.time);
 
-        Button button = view.findViewById(R.id.save_button);
-        button.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton button = view.findViewById(R.id.save_button);
+
+        editTimeText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CustomAlarmDialog alarm = new CustomAlarmDialog(getActivity(), editTimeText);
+                alarm.show();
+            }
+        });
+        button.setOnClickListener(new FloatingActionButton.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SharedPreferences pref = getActivity().getSharedPreferences("memo_contain", Context.MODE_PRIVATE);
@@ -54,8 +68,6 @@ public class MemoWritingFragment extends Fragment {
                 String title = editTitleText.getText().toString();
                 String content = editContentText.getText().toString();
                 String time = editTimeText.getText().toString();
-
-                Log.d("fdsd", editor.commit() ? "Succ" : "failed");
 
                 Date nowDate = new Date();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd:hh:mm:ss");

@@ -40,7 +40,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Fragment2 extends Fragment {
+public class Fragment2 extends Fragment1{
     private ImageDataAdapter imageDataAdapter;
     static ArrayList<String> listItems = new ArrayList<>();
     private RecyclerView imageRecyclerView;
@@ -49,6 +49,7 @@ public class Fragment2 extends Fragment {
     static String currentDir;
     SimpleDateFormat format;
     String file_name, f;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
