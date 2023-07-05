@@ -17,6 +17,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -28,9 +29,12 @@ public class Profile extends AppCompatActivity {
     int position;
     numberItem item;
     private ActivityResultLauncher<Intent> launcher;
+    private static final int REQUEST_CALL_PHONE_PERMISSION = 1;
+    private static final int REQUEST_SMS = 2;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.profile);
         TextView nameText = findViewById(R.id.name);
         TextView numberText = findViewById(R.id.number);
@@ -39,7 +43,7 @@ public class Profile extends AppCompatActivity {
         ImageView message = findViewById(R.id.message);
         ImageView dismiss = findViewById(R.id.hide);
         CircleImageView profile = findViewById(R.id.profile);
-        ImageButton button = findViewById(R.id.button);
+        ImageButton gallery = findViewById(R.id.button);
 
         Intent intent = getIntent();
         position = intent.getIntExtra("position", 0);
@@ -51,20 +55,10 @@ public class Profile extends AppCompatActivity {
             profile.setImageBitmap(item.getBitmap());
         }
         call.setOnClickListener(v -> {
-            int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE);
-            if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
-                makePhoneCall();
-            } else {
-                Toast.makeText(getApplicationContext(), "Call failed ", Toast.LENGTH_SHORT).show();
-            }
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL_PHONE_PERMISSION);
         });
         message.setOnClickListener(v -> {
-            int permissionCheck = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.SEND_SMS);
-            if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
-                sendSMS();
-            } else {
-                Toast.makeText(getApplicationContext(), "Send failed ", Toast.LENGTH_SHORT).show();
-            }
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.SEND_SMS}, REQUEST_SMS);
         });
         dismiss.setOnClickListener(v -> {
             Delete(position);
@@ -89,7 +83,7 @@ public class Profile extends AppCompatActivity {
                 }
             }
         });
-        button.setOnClickListener(v -> {
+        gallery.setOnClickListener(v -> {
             Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
             galleryIntent.setType("image/*");
             launcher.launch(galleryIntent);
@@ -125,9 +119,8 @@ public class Profile extends AppCompatActivity {
         String smsNumber = "smsto:" + item.getNumber();
         Intent smsIntent = new Intent(Intent.ACTION_VIEW);
         smsIntent.setDataAndType(Uri.parse(smsNumber), "vnd.android-dir/mms-sms");
-        smsIntent.putExtra("address"  , "01234");
+        smsIntent.putExtra("address"  , "0");
         smsIntent.putExtra("sms_body"  , "Test ");
-
         try {
             startActivity(smsIntent);
             finish();
@@ -138,11 +131,17 @@ public class Profile extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == 1) {
+        if (requestCode == REQUEST_CALL_PHONE_PERMISSION) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 makePhoneCall();
             } else {
-                Toast.makeText(this, "Call failed ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Call permission denied", Toast.LENGTH_SHORT).show();
+            }
+        } else if (requestCode == REQUEST_SMS) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                sendSMS();
+            } else {
+                Toast.makeText(getApplicationContext(), "Send SMS permission denied", Toast.LENGTH_SHORT).show();
             }
         }
     }

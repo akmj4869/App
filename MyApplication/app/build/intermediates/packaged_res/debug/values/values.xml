@@ -6,12 +6,21 @@
     <color name="white">#FFFFFFFF</color>
     <string name="Tab3">tab3</string>
     <string name="_010_7149_9924">010-7149-9924</string>
+    <string name="_1">1</string>
+    <string name="_14">1</string>
+    <string name="_2">2</string>
     <string name="app_name">My Application</string>
+    <string name="complete">완료</string>
+    <string name="image">1</string>
     <string name="john">John</string>
+    <string name="memos">Memos</string>
+    <string name="name">이름</string>
+    <string name="number">번호</string>
     <string name="tab0">tab0</string>
     <string name="tab1">Tab1</string>
     <string name="tab2">Tab2</string>
     <string name="tab3">Tab3</string>
+    <string name="write">Write</string>
     <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
         
         

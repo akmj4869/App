@@ -10,6 +10,8 @@ import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -21,6 +23,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -31,10 +35,11 @@ import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Fragment2 extends Fragment {
     private ImageDataAdapter imageDataAdapter;
-    static ArrayList<String> listItems;
+    static ArrayList<String> listItems = new ArrayList<>();
     private ActivityResultLauncher<Intent> launcher;
     static String currentDir;
     SimpleDateFormat format;
@@ -43,15 +48,14 @@ public class Fragment2 extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        listItems = new ArrayList<>();
         currentDir = getActivity().getExternalFilesDir(null).toString();
         File imageDir = new File(currentDir + File.separator + "images");
-        File imgdir = new File(currentDir + File.separator + "texts");
-        if (!imgdir.exists()) {
-            imgdir.mkdirs();
-        }
         if (!imageDir.exists()) {
             imageDir.mkdirs();
+        }
+        File imagdir = new File(currentDir + File.separator + "texts");
+        if (!imagdir.exists()) {
+            imagdir.mkdirs();
         }
         launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
             if (result.getResultCode() == Activity.RESULT_OK) {
@@ -71,7 +75,7 @@ public class Fragment2 extends Fragment {
                             bitmap.compress(Bitmap.CompressFormat.JPEG, 80, output);
                             output.flush();
                             output.close();
-                            File img = new File(imgdir, "filetexts.txt");
+                            File img = new File(imagdir, "filetexts.txt");
                             if (!img.exists()) {
                                 try {
                                     img.createNewFile();
@@ -100,39 +104,64 @@ public class Fragment2 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        AtomicBoolean isFABOpen = new AtomicBoolean(false);
+        final Animation showFab = AnimationUtils.loadAnimation(getActivity(), R.anim.fab_open);
+        final Animation hideFab = AnimationUtils.loadAnimation(getActivity(), R.anim.fab_close);
         View view = inflater.inflate(R.layout.fragment2, container, false);
-        File imgdir = new File(currentDir + File.separator + "texts");
-        if (!imgdir.exists()) {
-            imgdir.mkdirs();
-        }
-        File imgfile = new File(imgdir, "filetexts.txt");
-        if (imgfile.exists()){
-            FileInputStream fileInputStream;
-            try {
-                fileInputStream = new FileInputStream(imgfile);
-            } catch (FileNotFoundException e) {
-                throw new RuntimeException(e);
+        if (listItems.isEmpty()) {
+            File imgdir = new File(currentDir + File.separator + "texts");
+            if (!imgdir.exists()) {
+                imgdir.mkdirs();
             }
-            BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
-            try {
-                String line;
-                while((line = reader.readLine()) != null) {
-                    listItems.add(line);
+            File imgfile = new File(imgdir, "filetexts.txt");
+            if (imgfile.exists()) {
+                FileInputStream fileInputStream;
+                try {
+                    fileInputStream = new FileInputStream(imgfile);
+                } catch (FileNotFoundException e) {
+                    throw new RuntimeException(e);
                 }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
+                try {
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        listItems.add(line);
+                    }
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
         RecyclerView imageRecyclerView = view.findViewById(R.id.Images);
         ImageButton camera = view.findViewById(R.id.camera);
         ImageButton gallery = view.findViewById(R.id.gallery);
+        FloatingActionButton plus = view.findViewById(R.id.plus);
         camera.bringToFront();
         gallery.bringToFront();
+        camera.setVisibility(View.GONE);
+        gallery.setVisibility(View.GONE);
         imageDataAdapter = new ImageDataAdapter(listItems);
         GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
         imageRecyclerView.setLayoutManager(layoutManager);
         imageRecyclerView.addItemDecoration(new GridSpacingItemDecoration(2, 75, true));
         imageRecyclerView.setAdapter(imageDataAdapter);
+        plus.setOnClickListener(v -> {
+            if (!isFABOpen.get()) {
+                camera.setVisibility(View.VISIBLE);
+                gallery.setVisibility(View.VISIBLE);
+                camera.startAnimation(showFab);
+                gallery.startAnimation(showFab);
+                plus.setImageResource(R.drawable.menu);
+                isFABOpen.set(true);
+            } else {
+                camera.startAnimation(hideFab);
+                gallery.startAnimation(hideFab);
+                camera.setVisibility(View.GONE);
+                gallery.setVisibility(View.GONE);
+                plus.setImageResource(R.drawable.plus);
+                isFABOpen.set(false);
+            }
+        });
         camera.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), Camera.class);
             requireActivity().startActivity(intent);

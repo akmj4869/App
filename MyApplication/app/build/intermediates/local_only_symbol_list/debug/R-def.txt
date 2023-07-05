@@ -1,5 +1,7 @@
 R_DEF: Internal format may change without notice
 local
+anim fab_close
+anim fab_open
 anim fadeout
 anim none
 color black
@@ -43,7 +45,6 @@ id frame
 id gallery
 id hide
 id image
-id imagename
 id memo_content_edit
 id memo_title_edit
 id message
@@ -91,12 +92,21 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 string Tab3
 string _010_7149_9924
+string _1
+string _14
+string _2
 string app_name
+string complete
+string image
 string john
+string memos
+string name
+string number
 string tab0
 string tab1
 string tab2
 string tab3
+string write
 style Base.Theme.MyApplication
 style Theme.MyApplication
 xml backup_rules

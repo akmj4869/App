@@ -27,6 +27,8 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim fab_close
+anim fab_open
 anim fadeout
 anim fragment_fast_out_extra_slow_in
 anim mtrl_bottom_sheet_slide_in
@@ -2756,7 +2758,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imagename
 id immediateStop
 id included
 id info
@@ -3233,6 +3234,9 @@ mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string Tab3
 string _010_7149_9924
+string _1
+string _14
+string _2
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3270,12 +3274,14 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string complete
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string image
 string item_view_role_description
 string john
 string m3_ref_typeface_brand_display_regular
@@ -3323,6 +3329,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string memos
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description
@@ -3359,6 +3366,8 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
+string name
+string number
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -3370,6 +3379,7 @@ string tab0
 string tab1
 string tab2
 string tab3
+string write
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5"
-        android:text="Memos"
+        android:text="@string/memos"
         android:gravity="center"
         >
 
@@ -24,7 +24,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="Write"
+        android:text="@string/write"
         android:layout_weight="5"
         android:id="@+id/write"
         >

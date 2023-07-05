@@ -8,6 +8,10 @@
         "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-31:\\anim\\fadeout.xml"
     },
     {
+        "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-29:\\drawable_camera.png.flat",
+        "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-31:\\drawable\\camera.png"
+    },
+    {
         "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-29:\\anim_none.xml.flat",
         "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-31:\\anim\\none.xml"
     },
@@ -92,6 +96,10 @@
         "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-31:\\layout\\calendar_view.xml"
     },
     {
+        "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-29:\\anim_fab_open.xml.flat",
+        "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-31:\\anim\\fab_open.xml"
+    },
+    {
         "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-29:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-31:\\xml\\data_extraction_rules.xml"
     },
@@ -132,16 +140,16 @@
         "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-31:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.myapplication.app-merged_res-29:/layout_recyclerview_item.xml.flat",
-        "source": "com.example.myapplication.app-main-31:/layout/recyclerview_item.xml"
-    },
-    {
         "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-29:\\layout_memo_writing_fragment.xml.flat",
         "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-31:\\layout\\memo_writing_fragment.xml"
     },
     {
         "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-29:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-31:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-29:\\anim_fab_close.xml.flat",
+        "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-31:\\anim\\fab_close.xml"
     },
     {
         "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-29:\\layout_camerapage.xml.flat",
@@ -154,6 +162,14 @@
     {
         "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-29:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-31:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.myapplication.app-merged_res-29:/layout_expanded_image.xml.flat",
+        "source": "com.example.myapplication.app-main-31:/layout/expanded_image.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-merged_res-29:/layout_imagepage.xml.flat",
+        "source": "com.example.myapplication.app-main-31:/layout/imagepage.xml"
     },
     {
         "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-29:\\layout_memo_item.xml.flat",
@@ -182,6 +198,10 @@
     {
         "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-29:\\layout_expanded_image.xml.flat",
         "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-31:\\layout\\expanded_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-29:\\drawable_trash.png.flat",
+        "source": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-main-31:\\drawable\\trash.png"
     },
     {
         "merged": "C:\\Users\\akmj4\\.gradle\\daemon\\8.0\\com.example.myapplication.app-merged_res-29:\\drawable_save.png.flat",
