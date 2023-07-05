@@ -24,7 +24,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="10"
+            android:layout_weight="13"
             android:background="@drawable/round_edge">
             <EditText
                 android:id="@+id/memo_title_edit"
@@ -68,7 +68,7 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1.7"
+                        android:layout_weight="1.5"
                         ></TextView>
                     <TextView
                         android:id="@+id/date"
@@ -78,7 +78,8 @@
                         android:text="2023-07-04"
                         android:layout_marginRight="5dp"
                         android:textSize="18dp"
-                        android:gravity= "bottom"
+                        android:gravity="bottom|right"
+                        android:layout_marginHorizontal="10dp"
                         android:layout_weight="1"
                         >
                     </TextView>
