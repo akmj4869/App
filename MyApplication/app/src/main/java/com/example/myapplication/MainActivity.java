@@ -11,19 +11,18 @@ import com.google.gson.Gson;
 
 public class MainActivity extends AppCompatActivity {
 
-    Fragment fragment0, fragment1, fragment2, fragment3;
+    Fragment fragment1, fragment2, fragment3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fragment0 = new Fragment0();
         fragment1 = new Fragment1();
         fragment2 = new Fragment2();
         fragment3 = new CalendarFragment();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment0).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment1).commit();
         TabLayout tabLayout = findViewById(R.id.tab);
         tabLayout.getSelectedTabPosition();
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -34,12 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
                     Fragment selected = null;
                     if (position == 0){
-                        selected = fragment0;
-                    } else if (position == 1){
                         selected = fragment1;
-                    } else if (position == 2){
+                    } else if (position == 1){
                         selected = fragment2;
-                    } else if (position == 3){
+                    } else if (position == 2){
                         selected = fragment3;
                     }
                     assert selected != null;
@@ -57,15 +54,13 @@ public class MainActivity extends AppCompatActivity {
 
 
                     Fragment selected = null;
-                    if (position == 0){
-                        selected = fragment0;
-                    } else if (position == 1){
-                        selected = fragment1;
-                    } else if (position == 2){
-                        selected = fragment2;
-                    } else if (position == 3){
-                        selected = fragment3;
-                    }
+                if (position == 0){
+                    selected = fragment1;
+                } else if (position == 1){
+                    selected = fragment2;
+                } else if (position == 2){
+                    selected = fragment3;
+                }
                     assert selected != null;
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, selected).commit();
                 }

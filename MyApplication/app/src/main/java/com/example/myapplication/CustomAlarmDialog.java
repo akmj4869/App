@@ -55,6 +55,9 @@ public class CustomAlarmDialog extends Dialog {
                 fromTimebtn.setBackground(ContextCompat.getDrawable(context, R.drawable.round_edge_selected));
                 toTimebtn.setBackgroundColor(ContextCompat.getColor(context, R.color.white));
 
+                timePicker1.setHour(Integer.parseInt(((String)fromTimebtn.getText()).substring(0,2)));
+                timePicker1.setMinute(Integer.parseInt(((String)fromTimebtn.getText()).substring(3,5)));
+
                 timePicker2.setVisibility(View.GONE);
                 timePicker1.setVisibility(View.VISIBLE);
 
@@ -67,6 +70,8 @@ public class CustomAlarmDialog extends Dialog {
                 toTimebtn.setBackground(ContextCompat.getDrawable(context, R.drawable.round_edge_selected));
                 fromTimebtn.setBackgroundColor(ContextCompat.getColor(context, R.color.white));
 
+                timePicker2.setHour(Integer.parseInt(((String)toTimebtn.getText()).substring(0,2)));
+                timePicker2.setMinute(Integer.parseInt(((String)toTimebtn.getText()).substring(3,5)));
 
                 timePicker1.setVisibility(View.GONE);
                 timePicker2.setVisibility(View.VISIBLE);

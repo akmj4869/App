@@ -17,14 +17,6 @@
         app:tabIconTintMode="multiply"
         >
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tab_Item0"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/home"
-            android:background="@color/black"
-            />
-
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tab_Item1"

@@ -183,7 +183,7 @@ public class MemoReadingFragment extends Fragment {
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-        builder.setTitle("").setMessage("선택하세요.");
+        builder.setTitle("").setMessage("정말 삭제하시겠습니까?");
 
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener(){
             @Override

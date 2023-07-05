@@ -2972,7 +2972,6 @@ id submit_area
 id supportScrollUp
 id tab
 id tabMode
-id tab_Item0
 id tab_Item1
 id tab_Item2
 id tab_Item3

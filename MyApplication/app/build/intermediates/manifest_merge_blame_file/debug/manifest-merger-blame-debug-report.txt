@@ -6,136 +6,138 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml
+8-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml
+9-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml
 10
 11    <uses-feature
-11-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:4:5-6:36
+11-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:4:5-6:36
 12        android:name="android.hardware.camera"
-12-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:5:9-47
+12-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:5:9-47
 13        android:required="false" />
-13-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:6:9-33
+13-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:6:9-33
 14    <uses-feature
-14-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:7:9-9:40
+14-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:7:9-9:40
 15        android:name="android.hardware.camera.autofocus"
-15-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:8:13-61
+15-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:8:13-61
 16        android:required="false" />
-16-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:9:13-37
+16-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:9:13-37
 17    <uses-feature
-17-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:10:9-12:40
+17-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:10:9-12:40
 18        android:name="android.hardware.camera.flash"
-18-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:11:13-57
+18-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:11:13-57
 19        android:required="false" />
-19-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:12:13-37
+19-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:12:13-37
 20    <uses-feature
-20-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:13:5-15:36
+20-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:13:5-15:36
 21        android:name="android.hardware.telephony"
-21-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:14:9-50
+21-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:14:9-50
 22        android:required="false" />
-22-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:15:9-33
+22-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:15:9-33
 23
 24    <uses-permission android:name="android.permission.CAMERA" />
-24-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:17:5-65
-24-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:17:22-62
+24-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:17:5-65
+24-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:17:22-62
 25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-25-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:18:5-80
-25-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:18:22-77
+25-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:18:5-80
+25-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:18:22-77
 26    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-26-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:19:5-81
-26-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:19:22-78
+26-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:19:5-81
+26-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:19:22-78
 27    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-27-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:20:5-82
-27-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:20:22-79
+27-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:20:5-82
+27-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:20:22-79
 28    <uses-permission android:name="android.permission.CALL_PHONE" />
-28-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:21:5-68
-28-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:21:22-66
+28-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:21:5-68
+28-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:21:22-66
 29    <uses-permission android:name="android.permission.SEND_SMS" />
-29-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:22:5-67
-29-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:22:22-64
+29-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:22:5-67
+29-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:22:22-64
 30
 31    <permission
-31-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+31-->[androidx.core:core:1.9.0] C:\Users\82107\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 32        android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-32-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+32-->[androidx.core:core:1.9.0] C:\Users\82107\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 33        android:protectionLevel="signature" />
-33-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+33-->[androidx.core:core:1.9.0] C:\Users\82107\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 34
 35    <uses-permission android:name="com.example.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-35-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-35-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+35-->[androidx.core:core:1.9.0] C:\Users\82107\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+35-->[androidx.core:core:1.9.0] C:\Users\82107\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 36
 37    <application
-37-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:23:5-45:19
+37-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:23:5-47:19
 38        android:allowBackup="true"
-38-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:24:9-35
+38-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:24:9-35
 39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-39-->[androidx.core:core:1.9.0] C:\Users\akmj4\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+39-->[androidx.core:core:1.9.0] C:\Users\82107\.gradle\caches\transforms-3\55dedc70b95a473650eda30d4efd0f99\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 40        android:dataExtractionRules="@xml/data_extraction_rules"
-40-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:25:9-65
+40-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:25:9-65
 41        android:debuggable="true"
 42        android:extractNativeLibs="false"
 43        android:fullBackupContent="@xml/backup_rules"
-43-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:26:9-54
+43-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:26:9-54
 44        android:icon="@mipmap/ic_launcher"
-44-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:27:9-43
+44-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:27:9-43
 45        android:label="@string/app_name"
-45-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:28:9-41
+45-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:28:9-41
 46        android:roundIcon="@mipmap/ic_launcher_round"
-46-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:29:9-54
+46-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:29:9-54
 47        android:supportsRtl="true"
-47-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:30:9-35
+47-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:30:9-35
 48        android:testOnly="true"
 49        android:theme="@style/Theme.MyApplication" >
-49-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:31:9-51
+49-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:31:9-51
 50        <activity android:name="com.example.myapplication.expandedImage" />
-50-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:9-51
-50-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:19-48
+50-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:33:9-51
+50-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:33:19-48
 51        <activity android:name="com.example.myapplication.Profile" />
-51-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:34:9-70
-51-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:34:19-67
+51-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:34:9-70
+51-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:34:19-67
 52        <activity android:name="com.example.myapplication.Camera" />
-52-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:35:9-69
-52-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:35:19-66
+52-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:35:9-69
+52-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:35:19-66
 53        <activity
-53-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:36:9-44:20
+53-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:37:9-46:20
 54            android:name="com.example.myapplication.MainActivity"
-54-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:37:13-41
-55            android:exported="true" >
-55-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:38:13-36
-56            <intent-filter>
-56-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:39:13-43:29
-57                <action android:name="android.intent.action.MAIN" />
-57-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:40:17-69
-57-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:40:25-66
-58
-59                <category android:name="android.intent.category.LAUNCHER" />
-59-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:42:17-77
-59-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:42:27-74
-60            </intent-filter>
-61        </activity>
-62
-63        <provider
-63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-64            android:name="androidx.startup.InitializationProvider"
-64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-65            android:authorities="com.example.myapplication.androidx-startup"
-65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-66            android:exported="false" >
-66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-67            <meta-data
-67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-68                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-69                android:value="androidx.startup" />
-69-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-70            <meta-data
-70-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\akmj4\.gradle\caches\transforms-3\d792cfc6337e3c8fbac3183f5288f77a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-71                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-71-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\akmj4\.gradle\caches\transforms-3\d792cfc6337e3c8fbac3183f5288f77a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-72                android:value="androidx.startup" />
-72-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\akmj4\.gradle\caches\transforms-3\d792cfc6337e3c8fbac3183f5288f77a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-73        </provider>
-74    </application>
-75
-76</manifest>
+54-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:38:13-41
+55            android:exported="true"
+55-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:39:13-36
+56            android:screenOrientation="portrait" >
+56-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:40:13-49
+57            <intent-filter>
+57-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:41:13-45:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:42:17-69
+58-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:42:25-66
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:44:17-77
+60-->C:\Users\82107\AndroidStudioProjects\app2\MyApplication\app\src\main\AndroidManifest.xml:44:27-74
+61            </intent-filter>
+62        </activity>
+63
+64        <provider
+64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\82107\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+65            android:name="androidx.startup.InitializationProvider"
+65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\82107\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+66            android:authorities="com.example.myapplication.androidx-startup"
+66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\82107\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+67            android:exported="false" >
+67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\82107\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+68            <meta-data
+68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\82107\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+69                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+69-->[androidx.emoji2:emoji2:1.2.0] C:\Users\82107\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+70                android:value="androidx.startup" />
+70-->[androidx.emoji2:emoji2:1.2.0] C:\Users\82107\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+71            <meta-data
+71-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\82107\.gradle\caches\transforms-3\d792cfc6337e3c8fbac3183f5288f77a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+72                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+72-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\82107\.gradle\caches\transforms-3\d792cfc6337e3c8fbac3183f5288f77a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+73                android:value="androidx.startup" />
+73-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\82107\.gradle\caches\transforms-3\d792cfc6337e3c8fbac3183f5288f77a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+74        </provider>
+75    </application>
+76
+77</manifest>
