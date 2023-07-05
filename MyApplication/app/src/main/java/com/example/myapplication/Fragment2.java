@@ -37,7 +37,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class Fragment2 extends Fragment1{
+public class Fragment2 extends Fragment{
     private ImageDataAdapter imageDataAdapter;
     static ArrayList<String> listItems = new ArrayList<>();
     private ActivityResultLauncher<Intent> launcher;

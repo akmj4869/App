@@ -85,57 +85,56 @@
 46-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:29:9-54
 47        android:supportsRtl="true"
 47-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:30:9-35
-48        android:testOnly="true"
-49        android:theme="@style/Theme.MyApplication" >
-49-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:31:9-51
-50        <activity android:name="com.example.myapplication.expandedImage" />
-50-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:9-51
-50-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:19-48
-51        <activity android:name="com.example.myapplication.Profile" />
-51-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:34:9-70
-51-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:34:19-67
-52        <activity android:name="com.example.myapplication.Camera" />
-52-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:35:9-69
-52-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:35:19-66
-53        <activity
-53-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:36:9-44:20
-54            android:name="com.example.myapplication.MainActivity"
-54-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:37:13-41
-55            android:exported="true" >
-55-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:38:13-36
-56            <intent-filter>
-56-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:39:13-43:29
-57                <action android:name="android.intent.action.MAIN" />
-57-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:40:17-69
-57-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:40:25-66
-58
-59                <category android:name="android.intent.category.LAUNCHER" />
-59-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:42:17-77
-59-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:42:27-74
-60            </intent-filter>
-61        </activity>
-62
-63        <provider
-63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-64            android:name="androidx.startup.InitializationProvider"
-64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-65            android:authorities="com.example.myapplication.androidx-startup"
-65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-66            android:exported="false" >
-66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-67            <meta-data
-67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-68                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-69                android:value="androidx.startup" />
-69-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-70            <meta-data
-70-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\akmj4\.gradle\caches\transforms-3\d792cfc6337e3c8fbac3183f5288f77a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-71                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-71-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\akmj4\.gradle\caches\transforms-3\d792cfc6337e3c8fbac3183f5288f77a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-72                android:value="androidx.startup" />
-72-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\akmj4\.gradle\caches\transforms-3\d792cfc6337e3c8fbac3183f5288f77a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-73        </provider>
-74    </application>
-75
-76</manifest>
+48        android:theme="@style/Theme.MyApplication" >
+48-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:31:9-51
+49        <activity android:name="com.example.myapplication.expandedImage" />
+49-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:9-51
+49-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:33:19-48
+50        <activity android:name="com.example.myapplication.Profile" />
+50-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:34:9-70
+50-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:34:19-67
+51        <activity android:name="com.example.myapplication.Camera" />
+51-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:35:9-69
+51-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:35:19-66
+52        <activity
+52-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:36:9-44:20
+53            android:name="com.example.myapplication.MainActivity"
+53-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:37:13-41
+54            android:exported="true" >
+54-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:38:13-36
+55            <intent-filter>
+55-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:39:13-43:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:40:17-69
+56-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:40:25-66
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+58-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:42:17-77
+58-->C:\Users\akmj4\AndroidStudioProjects\app1\App\MyApplication\app\src\main\AndroidManifest.xml:42:27-74
+59            </intent-filter>
+60        </activity>
+61
+62        <provider
+62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+63            android:name="androidx.startup.InitializationProvider"
+63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+64            android:authorities="com.example.myapplication.androidx-startup"
+64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+65            android:exported="false" >
+65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+66            <meta-data
+66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+67                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+68                android:value="androidx.startup" />
+68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\akmj4\.gradle\caches\transforms-3\69262e6e1ef2f549fc8371faf15c8c5f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+69            <meta-data
+69-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\akmj4\.gradle\caches\transforms-3\d792cfc6337e3c8fbac3183f5288f77a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+70                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+70-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\akmj4\.gradle\caches\transforms-3\d792cfc6337e3c8fbac3183f5288f77a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+71                android:value="androidx.startup" />
+71-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\akmj4\.gradle\caches\transforms-3\d792cfc6337e3c8fbac3183f5288f77a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+72        </provider>
+73    </application>
+74
+75</manifest>
